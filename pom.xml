@@ -49,6 +49,16 @@
         </repository>
     </repositories>
 
+    <pluginRepositories>
+        <pluginRepository>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <id>maven2-release</id>
+            <url>http://uk.maven.org/maven2/</url>
+        </pluginRepository>
+    </pluginRepositories>
+
     <organization>
         <name>卡尔科技工作室</name>
         <url>http://blog.csdn.net/u010475041</url>
