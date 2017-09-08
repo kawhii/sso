@@ -36,15 +36,6 @@ To update `SNAPSHOT` versions run:
 ./build.sh package -U
 ```
 
-# Deployment
-
-- Create a keystore file `thekeystore` under `/etc/cas`. Use the password `changeit` for both the keystore and the key/certificate entries.
-- Ensure the keystore is loaded up with keys and certificates of the server.
-
-On a successful deployment via the following methods, CAS will be available at:
-
-* `http://cas.server.name:8080/cas`
-* `https://cas.server.name:8443/cas`
 
 ## Executable WAR
 
