@@ -13,6 +13,10 @@
     <version>1.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
+    <modules>
+        <module>sso-server</module>
+    </modules>
+
 
     <properties>
         <java.version>1.8</java.version>
