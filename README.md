@@ -1,5 +1,5 @@
 # SSO
-[打开博客教程](http://blog.csdn.net/u010475041)
+[打开博客教程](http://blog.csdn.net/u010475041/article/category/7156505)
 
 ## 项目介绍
 
