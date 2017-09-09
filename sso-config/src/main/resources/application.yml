@@ -1,0 +1,21 @@
+#\u6307\u5B9A\u65E5\u5FD7\u8F93\u51FA\u6587\u4EF6
+logging:
+  file: "logs/sso-config.log"
+info:
+  name : "\u914D\u7F6E\u4E2D\u5FC3"
+
+---
+server:
+  #\u670D\u52A1\u7AEF\u53E3
+  port: 8888
+  #\u8BBF\u95EE\u8DEF\u5F84
+  context-path: /config
+spring:
+  profiles:
+    #\u672C\u5730\u914D\u7F6E\u6587\u4EF6
+    active:
+      #\u914D\u7F6E\u6587\u4EF6\u672C\u5730\u5316
+      - native
+  application:
+    #\u6307\u5B9A\u5E94\u7528\u540D\u79F0
+    name: sso-config

@@ -18,6 +18,7 @@
 | 模块名 |模块介绍|备注|端口情况|必须https|context-path|
 |:-------|:-------|:-------|:-------|:-------|:-----|
 |sso-server|cas服务|负责接入鉴权|8443|√|cas|
+|sso-config|配置中心|负责管理各个服务配置|8888|×|config|
 
 ## 代码下载
 1. 每一个阶段都会封版打一个tag，需要的进行[下载](https://github.com/laomazi2006/sso/releases)
