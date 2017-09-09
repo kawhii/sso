@@ -25,6 +25,10 @@
 2. 原始构建文件存在于original-files目录下
 
 
+[码云](https://gitee.com/Kawhi-Carl/sso)
+[Github](https://github.com/laomazi2006/sso)
+
+
 
 
 ## 环境要求
