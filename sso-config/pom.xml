@@ -5,7 +5,7 @@
 
     <groupId>com.carl.auth</groupId>
     <artifactId>sso-config</artifactId>
-    <version>1.2.0-SNAPSHOT</version>
+    <version>1.2.0</version>
     <packaging>jar</packaging>
 
     <name>sso-config</name>
