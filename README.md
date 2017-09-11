@@ -51,10 +51,6 @@
 
 ## Development [![Dependency Status](https://www.versioneye.com/user/projects/59b6afd60fb24f004e1a656b/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/59b6afd60fb24f004e1a656b)
 
-
-
-## 环境要求
-
 * jdk8
 * maven3
 
