@@ -1,15 +1,6 @@
-[![Build Status](https://travis-ci.org/laomazi2006/sso.svg?branch=master)](https://travis-ci.org/laomazi2006/sso) [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/laomazi2006/sso/master/LICENSE) [![GitHub issues](https://img.shields.io/github/issues/laomazi2006/sso.svg)](https://github.com/laomazi2006/sso/issues) [![GitHub Releases](https://img.shields.io/badge/release-v1.1.0-blue.svg)](https://github.com/laomazi2006/sso/releases)
+# SSO [![Build Status](https://travis-ci.org/laomazi2006/sso.svg?branch=master)](https://travis-ci.org/laomazi2006/sso) [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/laomazi2006/sso/master/LICENSE) [![GitHub issues](https://img.shields.io/github/issues/laomazi2006/sso.svg)](https://github.com/laomazi2006/sso/issues) [![GitHub Releases](https://img.shields.io/badge/release-v1.1.0-blue.svg)](https://github.com/laomazi2006/sso/releases)
 
-# SSO
-
-## Tutorial: [![Csdn Blog Tutorial](https://img.shields.io/badge/csdn%20blog-tutorial-orange.svg)](http://blog.csdn.net/u010475041/article/category/7156505)
-
-* [Blog](http://blog.csdn.net/u010475041/article/category/7156505)
-* [Support](https://github.com/laomazi2006/sso/wiki)
-
-## 项目介绍
-
-该项目打造一个单点登录平台，其中包括以下子系统
+打造一个单点登录平台，其中包括以下子系统
 
 * CAS SERVER
 * 配置中心
@@ -18,6 +9,32 @@
 * 客户端集成(cas client、paf4j)
 
 并且在博客中记录整个大家过程以及注意事项
+
+--------------------
+
+其中每一个阶段会发布一个版本，里程碑为：
+
+1. CAS搭建HelloWorld
+2. SSL证书生成并导入https
+3. 配置中心搭建
+4. cas-management搭建
+5. 监控平台搭建
+6. CAS数据库认证，密码管理
+7. 多属性返回
+8. 自定义主题
+9. 授权码持久化配置、票据持久化配置
+10. CAS多系统安全
+11. CAS client demo测试单点登录
+12. Pa4j客户端单点登录整合
+13. Rest协议认证
+14. Shiro代理认证
+15. OAuth协议对接
+
+
+## Tutorial: [![Csdn Blog Tutorial](https://img.shields.io/badge/csdn%20blog-tutorial-orange.svg)](http://blog.csdn.net/u010475041/article/category/7156505)
+
+* [Blog](http://blog.csdn.net/u010475041/article/category/7156505)
+* [Support](https://github.com/laomazi2006/sso/wiki)
 
 ## 模块介绍
 
