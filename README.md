@@ -1,4 +1,4 @@
-# SSO [![Build Status](https://travis-ci.org/laomazi2006/sso.svg?branch=master)](https://travis-ci.org/laomazi2006/sso) [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/laomazi2006/sso/master/LICENSE) [![GitHub issues](https://img.shields.io/github/issues/laomazi2006/sso.svg)](https://github.com/laomazi2006/sso/issues) [![GitHub Releases](https://img.shields.io/badge/release-v1.1.0-blue.svg)](https://github.com/laomazi2006/sso/releases)
+# SSO [![Build Status](https://travis-ci.org/laomazi2006/sso.svg?branch=master)](https://travis-ci.org/laomazi2006/sso) [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/laomazi2006/sso/master/LICENSE) [![GitHub issues](https://img.shields.io/github/issues/laomazi2006/sso.svg)](https://github.com/laomazi2006/sso/issues) [![GitHub Releases](https://img.shields.io/badge/release-v1.2.0-blue.svg)](https://github.com/laomazi2006/sso/releases/latest)
 
 打造一个单点登录平台，其中包括以下子系统
 
