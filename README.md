@@ -38,16 +38,15 @@
 
 ## 模块介绍
 
-| 模块名 |模块介绍|备注|端口情况|必须https|context-path|启动循序
-|:-------|:-------|:-------|:-------|:-------|:-----|:--|
-|sso-server|cas服务|负责接入鉴权|8443|√|cas|2|
+| 模块名 |模块介绍|备注|端口情况|必须https|context-path|启动循序|域名
+|:-------|:-------|:-------|:-------|:-------|:-----|:--|:--|
+|sso-server|cas服务|负责接入鉴权|8443|√|cas|2|passport.sso.com
 |sso-config|配置中心|负责管理各个服务配置|8888|×|config|1|
 
-## 代码下载
+## 代码下载 [![码云](https://img.shields.io/badge/downloads-git%20oschina-brightgreen.svg)](https://gitee.com/Kawhi-Carl/sso) [![GitHub](https://img.shields.io/badge/downloads-GitHub-brightgreen.svg)](https://github.com/laomazi2006/sso)
+
 1. 每一个阶段都会封版打一个tag，需要的进行[下载](https://github.com/laomazi2006/sso/releases)
 2. 原始构建文件存在于original-files目录下
-
-[![码云](https://img.shields.io/badge/downloads-git%20oschina-brightgreen.svg)](https://gitee.com/Kawhi-Carl/sso) [![GitHub](https://img.shields.io/badge/downloads-GitHub-brightgreen.svg)](https://github.com/laomazi2006/sso)
 
 
 ## 环境要求
