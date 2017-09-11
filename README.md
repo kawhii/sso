@@ -47,11 +47,7 @@
 1. 每一个阶段都会封版打一个tag，需要的进行[下载](https://github.com/laomazi2006/sso/releases)
 2. 原始构建文件存在于original-files目录下
 
-
-[码云](https://gitee.com/Kawhi-Carl/sso)
-[Github](https://github.com/laomazi2006/sso)
-
-
+[![码云](https://img.shields.io/badge/downloads-git%20oschina-brightgreen.svg)](https://gitee.com/Kawhi-Carl/sso) [![GitHub](https://img.shields.io/badge/downloads-GitHub-brightgreen.svg)](https://github.com/laomazi2006/sso)
 
 
 ## 环境要求
