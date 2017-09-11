@@ -1,7 +1,10 @@
 # SSO
-[![Build Status](https://travis-ci.org/laomazi2006/sso.svg?branch=master)](https://travis-ci.org/laomazi2006/sso)
+[![Build Status](https://travis-ci.org/laomazi2006/sso.svg?branch=master)](https://travis-ci.org/laomazi2006/sso)[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/laomazi2006/sso/master/LICENSE)[![GitHub issues](https://img.shields.io/github/issues/laomazi2006/sso.svg)](https://github.com/laomazi2006/sso/issues)[![GitHub Releases](https://img.shields.io/badge/release-v1.1.0-blue.svg)](https://github.com/laomazi2006/sso/releases)
 
-[打开博客教程](http://blog.csdn.net/u010475041/article/category/7156505)
+## Tutorial: [![Csdn Blog Tutorial](https://img.shields.io/badge/csdn%20blog-tutorial-orange.svg)](http://blog.csdn.net/u010475041/article/category/7156505)
+
+* [Blog](http://blog.csdn.net/u010475041/article/category/7156505)
+* [Support](https://github.com/laomazi2006/sso/wiki)
 
 ## 项目介绍
 
