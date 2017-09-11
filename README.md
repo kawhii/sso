@@ -1,4 +1,6 @@
 # SSO
+[![Build Status](https://travis-ci.org/laomazi2006/sso.svg?branch=master)](https://travis-ci.org/laomazi2006/sso)
+
 [打开博客教程](http://blog.csdn.net/u010475041/article/category/7156505)
 
 ## 项目介绍
