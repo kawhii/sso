@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ 版权所有.(c)2008-2017. 卡尔科技工作室
+  -->
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/jdbc
+       http://www.springframework.org/schema/jdbc/spring-jdbc.xsd"
+>
+
+    <!--测试环境内嵌数据库进行用户的数据验证-->
+    <!--默认cas的内存数据库id为cas-hsql-database-->
+    <jdbc:embedded-database id="cas-hsql-database" type="HSQL" generate-name="">
+        <jdbc:script location="classpath*:profile/dev/sql/schema-dev.sql" encoding="UTF-8"></jdbc:script>
+        <jdbc:script location="classpath*:profile/dev/sql/data-dev.sql" encoding="UTF-8"></jdbc:script>
+    </jdbc:embedded-database>
+</beans>
