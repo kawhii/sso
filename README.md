@@ -52,12 +52,12 @@
 |sso-server|cas服务|负责接入鉴权|8443|√|cas|2|passport.sso.com
 |sso-config|配置中心|负责管理各个服务配置|8888|×|config|1|
 
-## 代码下载 [![码云](https://img.shields.io/badge/downloads-git%20oschina-brightgreen.svg)](https://gitee.com/Kawhi-Carl/sso) [![GitHub](https://img.shields.io/badge/downloads-GitHub-brightgreen.svg)](https://github.com/laomazi2006/sso)
+## 代码下载
 
 1. 每一个阶段都会封版打一个tag，需要的进行[下载](https://github.com/laomazi2006/sso/releases)
 2. 原始构建文件存在于original-files目录下
 
-## Development [![Dependency Status](https://www.versioneye.com/user/projects/59b6afd60fb24f004e1a656b/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/59b6afd60fb24f004e1a656b) [![codebeat badge](https://codebeat.co/badges/4b430ffd-0cb8-4310-b081-955a66e65c76)](https://codebeat.co/projects/github-com-laomazi2006-sso-master)
+## Development [![Dependency Status](https://www.versioneye.com/user/projects/59b6afd60fb24f004e1a656b/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/59b6afd60fb24f004e1a656b) [![Dependency Status](https://dependencyci.com/github/laomazi2006/sso/badge)](https://dependencyci.com/github/laomazi2006/sso) [![codebeat badge](https://codebeat.co/badges/4b430ffd-0cb8-4310-b081-955a66e65c76)](https://codebeat.co/projects/github-com-laomazi2006-sso-master)
 
 * jdk8
 * maven3
