@@ -47,10 +47,11 @@
 
 ## 模块介绍
 
-| 模块名 |模块介绍|备注|端口情况|必须https|context-path|启动循序|域名
-|:-------|:-------|:-------|:----|:-------|:-----|:--|:--|
-|sso-server|cas服务|负责接入鉴权|8443|√|cas|2|passport.sso.com
-|sso-config|配置中心|负责管理各个服务配置|8888|×|config|1|
+
+| 模块名 |模块介绍|备注|端口情况|必须https|path|启动循序
+|:-------|:-------|:-------|:----|:-------|:-----|:--|
+|sso-server|cas服务|接入鉴权|8443|√|cas|2|
+|sso-config|配置中心|管理各个服务配置|8888|×|config|1|
 
 ## 代码下载 [![码云](https://img.shields.io/badge/download-码云-yellowgreen.svg)](https://git.oschina.net/Kawhi-Carl/sso) [![Github](https://img.shields.io/badge/download-GitHub-brightgreen.svg)](https://github.com/laomazi2006/sso)
 
