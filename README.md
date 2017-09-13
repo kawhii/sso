@@ -52,7 +52,7 @@
 |sso-server|cas服务|负责接入鉴权|8443|√|cas|2|passport.sso.com
 |sso-config|配置中心|负责管理各个服务配置|8888|×|config|1|
 
-## 代码下载 [![码云](https://img.shields.io/badge/download-%E7%A0%81%E4%BA%91-yellowgreen.svg)](https://git.oschina.net/Kawhi-Carl/sso) [![Github](https://img.shields.io/badge/download-GitHub-brightgreen.svg)](https://github.com/laomazi2006/sso)
+## 代码下载 [![码云](https://img.shields.io/badge/download-码云-yellowgreen.svg)](https://git.oschina.net/Kawhi-Carl/sso) [![Github](https://img.shields.io/badge/download-GitHub-brightgreen.svg)](https://github.com/laomazi2006/sso)
 
 1. 每一个阶段都会封版打一个tag，需要的进行[下载](https://github.com/laomazi2006/sso/releases)
 2. 原始构建文件存在于original-files目录下
