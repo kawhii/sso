@@ -1,8 +1,8 @@
 language: java
 sudo: required
-branches:
-  only:
-  - master
+#branches:
+#  only:
+#  - master
 jdk:
 - oraclejdk8
 
