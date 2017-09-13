@@ -34,6 +34,12 @@
             <artifactId>cas-server-support-generic</artifactId>
             <version>${cas.version}</version>
         </dependency>
+        <!--pac4j认证-->
+        <dependency>
+            <groupId>org.apereo.cas</groupId>
+            <artifactId>cas-server-support-pac4j-authentication</artifactId>
+            <version>${cas.version}</version>
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
