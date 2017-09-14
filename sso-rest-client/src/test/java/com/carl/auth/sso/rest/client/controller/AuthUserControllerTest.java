@@ -5,8 +5,6 @@
 package com.carl.auth.sso.rest.client.controller;
 
 import com.carl.auth.sso.rest.client.config.ApplicationConfig;
-import org.hamcrest.Description;
-import org.hamcrest.Matcher;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,13 +13,13 @@ import org.springframework.context.annotation.Import;
 import org.springframework.http.MediaType;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
-import org.springframework.test.web.servlet.MvcResult;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import sun.misc.BASE64Encoder;
 
+import java.io.UnsupportedEncodingException;
 import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 /**
@@ -35,20 +33,38 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 public class AuthUserControllerTest {
     @Autowired
     private MockMvc mvc;
+    BASE64Encoder base64en = new BASE64Encoder();
+    MessageDigest md5 = MessageDigest.getInstance("MD5");
+
+    public AuthUserControllerTest() throws NoSuchAlgorithmException {
+    }
 
     @Test
-    public void login() throws Exception {
-        MessageDigest md5 = MessageDigest.getInstance("MD5");
+    public void loginAdmin() throws Exception {
         String username = "rest-admin";
-        String password = "123";
-        BASE64Encoder base64en = new BASE64Encoder();
+        String password = password("123");
         //加密后的字符串
-        String passwordMd5 = byteArrayToHex(md5.digest(password.getBytes("utf-8")));
-        String code = base64en.encode((username + ":" + passwordMd5).getBytes());
+        String code = base64en.encode((username + ":" + password).getBytes());
 
         mvc.perform(MockMvcRequestBuilders.post("/login")
                 .header("authorization", "Basic " + code)
                 .accept(MediaType.APPLICATION_JSON)).andExpect(status().isOk());
+    }
+
+    @Test
+    public void loginLocked() throws Exception {
+        String username = "rest-locked";
+        String password = password("123");
+        //加密后的字符串
+        String code = base64en.encode((username + ":" + password).getBytes());
+
+        mvc.perform(MockMvcRequestBuilders.post("/login")
+                .header("authorization", "Basic " + code)
+                .accept(MediaType.APPLICATION_JSON)).andExpect(status().isLocked());
+    }
+
+    private String password(String password) throws UnsupportedEncodingException {
+        return byteArrayToHex(md5.digest(password.getBytes("utf-8")));
     }
 
     /**
