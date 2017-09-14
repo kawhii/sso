@@ -20,8 +20,9 @@ public class SysUser {
     @JsonProperty("id")
     @NotNull
     private String username;
-    @JsonProperty("@c")
-    private String clazz = "";
+    @JsonProperty("@class")
+    //需要返回实现org.apereo.cas.authentication.principal.Principal的类名接口
+    private String clazz = "org.apereo.cas.authentication.principal.SimplePrincipal";
     @JsonProperty("attributes")
     private Map<String, Object> attributes = new HashMap<>();
 

@@ -33,7 +33,7 @@ public class AuthUserController {
 
     /**
      * 1. cas 服务端会通过post请求，并且把用户信息以"用户名:密码"进行Base64编码放在authorization请求头中
-     * 2. 返回200状态码并且格式为{"@c":".SimplePrincipal","id":"casuser","attributes":{}} 是成功的
+     * 2. 返回200状态码并且格式为{"@class":"org.apereo.cas.authentication.principal.SimplePrincipal","id":"casuser","attributes":{}} 是成功的
      * 2. 返回状态码403用户不可用；404账号不存在；423账户被锁定；428过期；其他登录失败
      *
      * @param httpHeaders
@@ -73,6 +73,7 @@ public class AuthUserController {
             LOGGER.error("", e);
             new ResponseEntity(HttpStatus.BAD_REQUEST);
         }
+        LOGGER.info("{}login is ok", user.getUsername());
         //成功返回json
         return user;
     }
