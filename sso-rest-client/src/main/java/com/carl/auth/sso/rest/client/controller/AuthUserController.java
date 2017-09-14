@@ -73,7 +73,7 @@ public class AuthUserController {
             LOGGER.error("", e);
             new ResponseEntity(HttpStatus.BAD_REQUEST);
         }
-        LOGGER.info("{}login is ok", user.getUsername());
+        LOGGER.info("[{}] login is ok", user.getUsername());
         //成功返回json
         return user;
     }
