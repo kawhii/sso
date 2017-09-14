@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: auth rest client
+server:
+  port: 8881
+
+logging:
+  level:
+    com:
+      carl: DEBUG
+

@@ -34,10 +34,10 @@
             <artifactId>cas-server-support-generic</artifactId>
             <version>${cas.version}</version>
         </dependency>
-        <!--pac4j认证-->
+        <!--restj认证-->
         <dependency>
             <groupId>org.apereo.cas</groupId>
-            <artifactId>cas-server-support-pac4j-authentication</artifactId>
+            <artifactId>cas-server-support-rest-authentication</artifactId>
             <version>${cas.version}</version>
         </dependency>
         <dependency>

@@ -1,24 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<!--
+  ~ 版权所有.(c)2008-2017. 卡尔科技工作室
+  -->
+
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
-
-    <artifactId>sso-config</artifactId>
-
-    <name>sso-config</name>
-
     <parent>
         <groupId>com.carl.auth</groupId>
         <artifactId>sso-spring-dependencies</artifactId>
         <version>1.3.1-SNAPSHOT</version>
         <relativePath>../sso-spring-dependencies</relativePath>
     </parent>
+    <modelVersion>4.0.0</modelVersion>
 
+    <artifactId>sso-rest-client</artifactId>
+
+
+    <name>sso-rest-client</name>
+    <description>CAS的Rest认证客户端</description>
 
     <dependencies>
         <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-config-server</artifactId>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
     </dependencies>
 
