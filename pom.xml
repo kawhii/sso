@@ -28,7 +28,7 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <cas.version>5.1.4</cas.version>
-        <springboot.version>1.5.7.RELEASE</springboot.version>
+        <springboot.version>1.5.3.RELEASE</springboot.version>
         <spring-cloud.version>Dalston.SR3</spring-cloud.version>
     </properties>
 
