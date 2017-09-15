@@ -5,6 +5,7 @@
 package com.carl.auth.sso.rest.client.controller;
 
 import com.carl.auth.sso.rest.client.config.ApplicationConfig;
+import org.apache.tomcat.util.codec.binary.Base64;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,7 +15,6 @@ import org.springframework.http.MediaType;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
-import sun.misc.BASE64Encoder;
 
 import java.io.UnsupportedEncodingException;
 import java.security.MessageDigest;
@@ -33,7 +33,6 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 public class AuthUserControllerTest {
     @Autowired
     private MockMvc mvc;
-    BASE64Encoder base64en = new BASE64Encoder();
     MessageDigest md5 = MessageDigest.getInstance("MD5");
 
     public AuthUserControllerTest() throws NoSuchAlgorithmException {
@@ -44,7 +43,7 @@ public class AuthUserControllerTest {
         String username = "rest-admin";
         String password = password("123");
         //加密后的字符串
-        String code = base64en.encode((username + ":" + password).getBytes());
+        String code = Base64.encodeBase64String((username + ":" + password).getBytes());
 
         mvc.perform(MockMvcRequestBuilders.post("/login")
                 .header("authorization", "Basic " + code)
@@ -56,7 +55,7 @@ public class AuthUserControllerTest {
         String username = "rest-locked";
         String password = password("123");
         //加密后的字符串
-        String code = base64en.encode((username + ":" + password).getBytes());
+        String code = Base64.encodeBase64String((username + ":" + password).getBytes());
 
         mvc.perform(MockMvcRequestBuilders.post("/login")
                 .header("authorization", "Basic " + code)
