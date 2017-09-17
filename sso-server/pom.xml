@@ -46,6 +46,12 @@
             <version>${springboot.version}</version>
             <scope>test</scope>
         </dependency>
+        <!--支持rest方式登录-->
+        <dependency>
+            <groupId>org.apereo.cas</groupId>
+            <artifactId>cas-server-support-rest</artifactId>
+            <version>${cas.version}</version>
+        </dependency>
     </dependencies>
     <dependencyManagement>
         <dependencies>
