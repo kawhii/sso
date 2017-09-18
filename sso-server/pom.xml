@@ -103,6 +103,10 @@
                             <artifactId>cas-server-webapp-tomcat</artifactId>
                         </overlay>
                     </overlays>
+                    <dependentWarExcludes>
+                        <!--war包下的服务不进行初始化-->
+                        **/services/*.json
+                    </dependentWarExcludes>
                 </configuration>
             </plugin>
             <plugin>
