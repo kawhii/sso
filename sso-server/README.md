@@ -109,7 +109,7 @@ cmd到 `${JAVA_HOME}jre\lib\security`
 
 运行如下命令：
 ```cmd
-keytool -import -alias passport.sso.com -keystore cacerts -file d:/tomcat.cer -trustcacerts
+keytool -import -alias passport.sso.com -keystore %JAVA_HOME%\jre\lib\security\cacerts -file d:/tomcat.cer -trustcacerts
 # 密码为 changeit
 ```
 
