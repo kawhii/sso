@@ -2,27 +2,15 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-
-    <groupId>com.carl.auth</groupId>
-    <artifactId>sso-config</artifactId>
-    <version>1.4.0-SNAPSHOT</version>
-    <packaging>jar</packaging>
-
-    <name>sso-config</name>
-
     <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.5.3.RELEASE</version>
-        <relativePath/> <!-- lookup parent from repository -->
+        <groupId>com.carl.auth</groupId>
+        <artifactId>sso-spring-dependencies</artifactId>
+        <version>1.3.3-SNAPSHOT</version>
+        <relativePath>../sso-spring-dependencies</relativePath>
     </parent>
 
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <java.version>1.8</java.version>
-        <spring-cloud.version>Dalston.SR3</spring-cloud.version>
-    </properties>
+    <artifactId>sso-config</artifactId>
+    <name>sso-config</name>
 
     <dependencies>
         <dependency>
@@ -31,17 +19,6 @@
         </dependency>
     </dependencies>
 
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>org.springframework.cloud</groupId>
-                <artifactId>spring-cloud-dependencies</artifactId>
-                <version>${spring-cloud.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
 
     <build>
         <plugins>
@@ -51,34 +28,4 @@
             </plugin>
         </plugins>
     </build>
-
-    <!--为了加快速度，修改成国内的代理-->
-    <repositories>
-        <repository>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-            <id>maven2-release</id>
-            <url>http://uk.maven.org/maven2/</url>
-        </repository>
-        <repository>
-            <snapshots>
-                <enabled>true</enabled>
-                <!--快照版本库两个小时检查更新一遍-->
-                <updatePolicy>interval:120</updatePolicy>
-            </snapshots>
-            <id>oss-snapshots</id>
-            <url>http://repository.jboss.org/nexus/content/groups/public/</url>
-        </repository>
-    </repositories>
-
-    <pluginRepositories>
-        <pluginRepository>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-            <id>maven2-release</id>
-            <url>http://uk.maven.org/maven2/</url>
-        </pluginRepository>
-    </pluginRepositories>
 </project>
