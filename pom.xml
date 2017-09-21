@@ -17,6 +17,7 @@
         <module>sso-server</module>
         <module>sso-config</module>
         <module>sso-spring-dependencies</module>
+        <module>sso-management</module>
     </modules>
 
 

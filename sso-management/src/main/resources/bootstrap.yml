@@ -1,0 +1,30 @@
+#
+# 版权所有.(c)2008-2017. 卡尔科技工作室
+#
+spring:
+  application:
+    name: cas-management
+  cloud:
+    config:
+      enable: true
+      watch:
+        enabled: true
+      fail-fast: true
+  profiles:
+    active: dev
+logging:
+  file: logs/cas-management.log
+info:
+  name: 接入管理系统
+health:
+  config:
+    enable: true
+
+# spring cloud config
+---
+spring:
+  profiles: dev
+  cloud:
+    config:
+      uri: http://localhost:8888/config
+---
