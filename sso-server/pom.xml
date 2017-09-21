@@ -21,6 +21,12 @@
     <description>CAS认证服务，负责各系统的鉴权的鉴权</description>
 
     <dependencies>
+        <!--mongodb存储客户端配置，持久化配置与客户端配置系统配置必须一致-->
+        <!--<dependency>
+            <groupId>org.apereo.cas</groupId>
+            <artifactId>cas-server-support-mongo-service-registry</artifactId>
+            <version>${cas.version}</version>
+        </dependency>-->
         <dependency>
             <groupId>org.apereo.cas</groupId>
             <artifactId>cas-server-webapp-tomcat</artifactId>
