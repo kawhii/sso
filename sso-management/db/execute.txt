@@ -1,0 +1,17 @@
+use admin
+db.createUser(
+  {
+    user: "admin",
+    pwd: "123456",
+    roles: [ { role: "userAdminAnyDatabase", db: "admin" } ]
+  }
+)
+
+use cas-mongo-database
+db.createUser(
+  {
+    user: "cas-config",
+    pwd: "123456",
+    roles: [ { role: "readWrite", db: "cas-mongo-database" }]
+  }
+)
