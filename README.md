@@ -55,6 +55,7 @@
 |sso-server|cas服务|接入鉴权|8443|√|cas|2|
 |sso-config|配置中心|管理各个服务配置|8888|×|config|1|
 |sso-management|service管理|接入管理|8081|×|cas-management|3|
+|sso-cas-client-demo|cas-client-demo|cas-client集成|8080|×|/sample|4|
 
 ## 代码下载 [![码云](https://img.shields.io/badge/download-码云-yellowgreen.svg)](https://git.oschina.net/Kawhi-Carl/sso) [![Github](https://img.shields.io/badge/download-GitHub-brightgreen.svg)](https://github.com/laomazi2006/sso)
 

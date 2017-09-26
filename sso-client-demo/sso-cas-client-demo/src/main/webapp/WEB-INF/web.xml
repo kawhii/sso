@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ 版权所有.(c)2008-2017. 卡尔科技工作室
+  -->
+
 <web-app version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
 
@@ -28,11 +32,11 @@
         <filter-class>org.jasig.cas.client.authentication.AuthenticationFilter</filter-class>
         <init-param>
             <param-name>casServerLoginUrl</param-name>
-            <param-value>https://mmoayyed.unicon.net:8443/cas/login</param-value>
+            <param-value>https://passport.sso.com:8443/cas/login</param-value>
         </init-param>
         <init-param>
             <param-name>serverName</param-name>
-            <param-value>https://mmoayyed.unicon.net:9443</param-value>
+            <param-value>http://localhost:8080</param-value>
         </init-param>
     </filter>
 
@@ -42,11 +46,11 @@
         <filter-class>org.jasig.cas.client.validation.Cas30ProxyReceivingTicketValidationFilter</filter-class>
         <init-param>
             <param-name>casServerUrlPrefix</param-name>
-            <param-value>https://mmoayyed.unicon.net:8443/cas</param-value>
+            <param-value>https://passport.sso.com:8443/cas</param-value>
         </init-param>
         <init-param>
             <param-name>serverName</param-name>
-            <param-value>https://mmoayyed.unicon.net:9443</param-value>
+            <param-value>http://localhost:8080</param-value>
         </init-param>
         <init-param>
             <param-name>redirectAfterValidation</param-name>
