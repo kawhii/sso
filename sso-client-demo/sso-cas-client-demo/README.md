@@ -1,48 +1,17 @@
-# Example CASified Java Web Application
+# 配置
 
-This is sample java web application that exercises the CAS protocol features via the Java CAS Client.
+该例子需要设置host为passport.sso.com
 
-Configure
----------
+[证书导入https教程](http://blog.csdn.net/u010475041/article/details/77931867)
 
-- Adjust the url endpoints of the CAS server and 
-the application server in the [`web.xml`](https://github.com/UniconLabs/cas-sample-java-webapp/blob/master/src/main/webapp/WEB-INF/web.xml) file.
+需要启动配置中心、cas服务、客户端demo
 
-## Build
-
-* Create a Java keystore at `/etc/cas/jetty/thekeystore` with the password `changeit`.
-* Import your server certificate inside this keystore.
-
-```bash
-mvn clean package jetty:run-forked
+启动demo:
+```cmd
+mvn jetty:run
 ```
 
-The application will be available on:
-```bash
-http://localhost:9080/sample
-```
-and
-```bash
-https://localhost:9443/sample
-```
-
- 
-## Testing High Availability
-
-Assuming you have deployed CAS on two nodes, you can use the sample application to make sure all nodes are properly
-sharing the ticket state. To do this, in the `web.xml` file ensure that:
-
-- The `casServerLoginUrl` of the `CAS Authentication Filter` points to CAS node 1 (i.e `https://cas1.sso.edu:8443/cas/login`).
-- The `casServerUrlPrefix` of the `CAS Validation Filter` points to CAS node 2 (i.e `https://cas2.sso.edu:8443/cas`)
-- For both of the above filters, the `serverName` should always point to the location where *this sample application* is deployed.
-
-
-Deploy the application and test. You may also want to reverse the order of CAS 
-nodes 1 and 2 in the above configuration, redeploy and test again.
-
-> Alternatively, one could test distributed CAS nodes without any client application 
-set up using [this](https://github.com/UniconLabs/duct) small command line utility
-
-
-
-
+访问：
+[http://localhost:8080/sample](http://localhost:8080/sample)
+不需登录访问
+[http://localhost:8080/sample/zhangsan.jsp](http://localhost:8080/sample/zhangsan.jsp)
