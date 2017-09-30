@@ -10,6 +10,7 @@
         <artifactId>sso-client-demo</artifactId>
         <groupId>com.carl.auth</groupId>
         <version>1.5.0-RC2-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
@@ -59,7 +60,7 @@
         <dependency>
             <groupId>org.jasig.cas.client</groupId>
             <artifactId>cas-client-core</artifactId>
-            <version>${java.cas.client.version}</version>
+            <version>3.4.1</version>
             <exclusions>
                 <exclusion>
                     <groupId>javax.servlet</groupId>
