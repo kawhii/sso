@@ -27,6 +27,12 @@
             <artifactId>cas-server-support-mongo-service-registry</artifactId>
             <version>${cas.version}</version>
         </dependency>-->
+        <!--代理认证-->
+        <dependency>
+            <groupId>org.apereo.cas</groupId>
+            <artifactId>cas-server-support-pac4j-webflow</artifactId>
+            <version>${cas.version}</version>
+        </dependency>
         <dependency>
             <groupId>org.apereo.cas</groupId>
             <artifactId>cas-server-webapp-tomcat</artifactId>
