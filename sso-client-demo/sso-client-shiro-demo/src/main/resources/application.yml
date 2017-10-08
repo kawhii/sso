@@ -31,6 +31,7 @@ server:
   port: 8083
 github:
 # 本系统已经绑定的id
-  isBindIds:
-    - '9932775'
+  bindId:
+    #9932775
+    - '9932776'
 ---

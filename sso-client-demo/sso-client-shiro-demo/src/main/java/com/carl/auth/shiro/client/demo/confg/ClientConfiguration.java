@@ -4,17 +4,17 @@
 
 package com.carl.auth.shiro.client.demo.confg;
 
+import com.carl.auth.shiro.client.demo.confg.pros.GithubProperties;
 import com.carl.auth.shiro.client.demo.core.ClientStrategy;
 import com.carl.auth.shiro.client.demo.core.ClientStrategyFactory;
 import com.carl.auth.shiro.client.demo.core.github.GitHubClientStrategy;
 import com.carl.auth.shiro.client.demo.core.github.GitHubMemoryPrincipalBindResolver;
-import org.springframework.beans.factory.annotation.Value;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
 
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 /**
@@ -25,14 +25,13 @@ import java.util.Map;
 @Configuration
 @Profile("dev")
 public class ClientConfiguration {
-    //FIXME 无法获取配置文件的数据
-    @Value("#{@environment['github.isBindIds']}")
-    private List<String> ids;
+    @Autowired
+    private GithubProperties properties;
 
     @Bean
     protected ClientStrategyFactory clientStrategyFactory() {
         Map<String, ClientStrategy> clientStrategyMap = new HashMap<>();
-        GitHubMemoryPrincipalBindResolver gitHubBinder = new GitHubMemoryPrincipalBindResolver(ids);
+        GitHubMemoryPrincipalBindResolver gitHubBinder = new GitHubMemoryPrincipalBindResolver(properties.getBindId());
         GitHubClientStrategy clientStrategy = new GitHubClientStrategy(gitHubBinder);
         clientStrategyMap.put(clientStrategy.name(), clientStrategy);
         return new ClientStrategyFactory(clientStrategyMap);

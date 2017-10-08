@@ -59,7 +59,7 @@ public class ThirdPartyLoginAspect {
     }
 
     @Before("loginHandle()")
-    public void doBefore(JoinPoint joinPoint) {
+    public void doBefore(JoinPoint pjp) throws Throwable {
         HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
         Principal principal = request.getUserPrincipal();
         if (principal != null && principal instanceof Pac4jPrincipal) {
@@ -75,12 +75,8 @@ public class ThirdPartyLoginAspect {
                 //判断该客户端是否已经有绑定用户
                 if (!clientStrategy.isBind(pac4jPrincipal)) {
                     logger.debug("用户[" + pac4jPrincipal.getProfile().getId() + "]通过" + clientStrategy.name() + "登录尚未绑定");
-                    try {
-                        //未绑定给予处理
-                        clientStrategy.handle(joinPoint);
-                    } catch (Exception e) {
-                        logger.error("", e);
-                    }
+                    //未绑定给予处理
+                    clientStrategy.handle(pjp);
                 }
             }
         }
