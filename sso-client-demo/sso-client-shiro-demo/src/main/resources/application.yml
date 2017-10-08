@@ -15,6 +15,7 @@ spring:
     suffix: .html
   aop:
     proxy-target-class: true
+    auto: true
 
 ---
 
@@ -28,4 +29,8 @@ cas:
 debug: true
 server:
   port: 8083
+github:
+# 本系统已经绑定的id
+  isBindIds:
+    - 9932775
 ---

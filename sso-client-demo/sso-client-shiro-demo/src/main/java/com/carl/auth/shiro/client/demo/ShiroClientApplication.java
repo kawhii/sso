@@ -6,6 +6,7 @@ package com.carl.auth.shiro.client.demo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
 
 /**
  * @author Carl
@@ -13,6 +14,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @since 1.5.0
  */
 @SpringBootApplication
+@EnableAspectJAutoProxy
 public class ShiroClientApplication {
     public static void main(String[] args) {
         SpringApplication.run(ShiroClientApplication.class, args);

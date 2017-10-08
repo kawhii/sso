@@ -7,16 +7,13 @@ package com.carl.auth.shiro.client.demo.confg;
 
 import io.buji.pac4j.filter.CallbackFilter;
 import io.buji.pac4j.filter.SecurityFilter;
-import io.buji.pac4j.realm.Pac4jRealm;
 import io.buji.pac4j.subject.Pac4jSubjectFactory;
 import org.apache.shiro.mgt.DefaultSecurityManager;
-import org.apache.shiro.mgt.SecurityManager;
-import org.apache.shiro.mgt.SubjectFactory;
-import org.apache.shiro.realm.Realm;
 import org.apache.shiro.spring.web.ShiroFilterFactoryBean;
 import org.apache.shiro.spring.web.config.AbstractShiroWebFilterConfiguration;
 import org.apache.shiro.spring.web.config.DefaultShiroFilterChainDefinition;
 import org.apache.shiro.spring.web.config.ShiroFilterChainDefinition;
+import org.apache.shiro.spring.web.config.ShiroWebFilterConfiguration;
 import org.pac4j.cas.client.CasClient;
 import org.pac4j.cas.client.rest.CasRestFormClient;
 import org.pac4j.cas.config.CasConfiguration;
@@ -47,11 +44,6 @@ public class ShiroConfiguration extends AbstractShiroWebFilterConfiguration {
     @Value("#{ @environment['cas.callbackUrl'] ?: null }")
     private String callbackUrl;
 
-
-    @Bean
-    public Realm pac4jRealm() {
-        return new Pac4jRealm();
-    }
 
     /**
      * cas核心过滤器，把支持的client写上，filter过滤时才会处理，clients必须在casConfig.clients已经注册
@@ -135,29 +127,18 @@ public class ShiroConfiguration extends AbstractShiroWebFilterConfiguration {
 
 
     /**
-     * 由于cas代理了用户，所以必须通过cas进行创建对象
-     *
-     * @return
-     */
-    @Bean
-    protected SubjectFactory subjectFactory() {
-        return new Pac4jSubjectFactory();
-    }
-
-    /**
      * 对过滤器进行调整
      *
-     * @param securityManager
      * @return
      */
     @Bean
-    protected ShiroFilterFactoryBean shiroFilterFactoryBean(SecurityManager securityManager) {
+    protected ShiroFilterFactoryBean shiroFilterFactoryBean() {
         //把subject对象设为subjectFactory
-        ((DefaultSecurityManager) securityManager).setSubjectFactory(subjectFactory());
-        ShiroFilterFactoryBean filterFactoryBean = super.shiroFilterFactoryBean();
-        filterFactoryBean.setSecurityManager(securityManager);
+        //由于cas代理了用户，所以必须通过cas进行创建对象
+        ((DefaultSecurityManager) securityManager).setSubjectFactory(new Pac4jSubjectFactory());
 
-        filterFactoryBean.setFilters(filters());
+        ShiroFilterFactoryBean filterFactoryBean = super.shiroFilterFactoryBean();
+        filterFactoryBean.setFilters(shiroFilters());
         return filterFactoryBean;
     }
 
@@ -167,7 +148,7 @@ public class ShiroConfiguration extends AbstractShiroWebFilterConfiguration {
      * @return
      */
     @Bean
-    protected Map<String, Filter> filters() {
+    protected Map<String, Filter> shiroFilters() {
         //过滤器设置
         Map<String, Filter> filters = new HashMap<>();
         filters.put("casSecurityFilter", casSecurityFilter());
