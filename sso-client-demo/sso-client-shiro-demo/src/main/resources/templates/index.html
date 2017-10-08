@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!--
+  ~ 版权所有.(c)2008-2017. 卡尔科技工作室
+  -->
+
+<html  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>shiro client</title>
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+</head>
+<body>
+<h1>当前是shiro 客户端</h1>
+<b>Attributes:</b>
+<table border='3pt' width='100%'>
+    <th colspan='2' th:text="'用户id:' + ${user.profile.id}"></th>
+    <tr>
+        <td><b>Key</b></td>
+        <td><b>Value</b></td>
+    </tr>
+    <!--/*@thymesVar id="user" type="io.buji.pac4j.subject.Pac4jPrincipal"*/-->
+    <tr th:each="data : ${user.profile.attributes}">
+        <td th:text="${data.key}"></td>
+        <td th:text="${data.value}"></td>
+    </tr>
+</table>
+<a th:href="@{/user/detail}">用户信息（json）</a>
+</body>
+</html>

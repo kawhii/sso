@@ -6,7 +6,6 @@ package com.carl.auth.shiro.client.demo.confg;
 
 
 import io.buji.pac4j.filter.CallbackFilter;
-import io.buji.pac4j.filter.LogoutFilter;
 import io.buji.pac4j.filter.SecurityFilter;
 import io.buji.pac4j.realm.Pac4jRealm;
 import io.buji.pac4j.subject.Pac4jSubjectFactory;
@@ -62,7 +61,7 @@ public class ShiroConfiguration extends AbstractShiroWebFilterConfiguration {
     @Bean
     public Filter casSecurityFilter() {
         SecurityFilter filter = new SecurityFilter();
-        filter.setClients("CasClient,rest");
+        filter.setClients("cas,rest");
         filter.setConfig(casConfig());
         return filter;
     }
@@ -116,6 +115,7 @@ public class ShiroConfiguration extends AbstractShiroWebFilterConfiguration {
         CasClient casClient = new CasClient();
         casClient.setConfiguration(casConfiguration());
         casClient.setCallbackUrl(callbackUrl);
+        casClient.setName("cas");
         return casClient;
     }
 
