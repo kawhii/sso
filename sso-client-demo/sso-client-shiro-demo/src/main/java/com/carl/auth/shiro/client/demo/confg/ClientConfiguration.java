@@ -25,7 +25,8 @@ import java.util.Map;
 @Configuration
 @Profile("dev")
 public class ClientConfiguration {
-    @Value("#{ @environment['github.isBindIds'] ?: null }")
+    //FIXME 无法获取配置文件的数据
+    @Value("#{@environment['github.isBindIds']}")
     private List<String> ids;
 
     @Bean
