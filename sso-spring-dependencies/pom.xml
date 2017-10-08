@@ -37,7 +37,7 @@
         <spring-cloud.version>Dalston.SR3</spring-cloud.version>
         <shiro.version>1.4.0</shiro.version>
         <buji.version>3.0.0</buji.version>
-        <pac4j.version>2.1.0</pac4j.version>
+        <pac4j.version>2.0.0</pac4j.version>
     </properties>
 
     <dependencyManagement>
