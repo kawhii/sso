@@ -54,7 +54,7 @@ public class ThirdPartyLoginAspect {
      * ~ .. 匹配任意数量的参数.
      */
 
-    @Pointcut("execution(public * com.carl.auth..*.controller.*.*(..))")
+    @Pointcut("execution(public * com.carl.auth..*.controller.IndexController.*(..))")
     public void loginHandle() {
     }
 
@@ -76,7 +76,7 @@ public class ThirdPartyLoginAspect {
                 if (!clientStrategy.isBind(pac4jPrincipal)) {
                     logger.debug("用户[" + pac4jPrincipal.getProfile().getId() + "]通过" + clientStrategy.name() + "登录尚未绑定");
                     //未绑定给予处理
-                    clientStrategy.handle(pjp);
+                    clientStrategy.handle(pjp, pac4jPrincipal);
                 }
             }
         }

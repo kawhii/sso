@@ -28,8 +28,9 @@ public interface ClientStrategy {
      * 若匹配出则进行终端处理
      *
      * @param joinPoint
+     * @param pac4jPrincipal
      */
-    void handle(JoinPoint joinPoint) throws Exception;
+    void handle(JoinPoint joinPoint, Pac4jPrincipal pac4jPrincipal) throws Exception;
 
 
     /**

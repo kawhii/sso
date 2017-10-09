@@ -10,11 +10,11 @@ package com.carl.auth.shiro.client.demo.core.github;
 
 import com.carl.auth.shiro.client.demo.core.ClientStrategy;
 import com.carl.auth.shiro.client.demo.core.PrincipalBindResolver;
+import com.carl.auth.shiro.client.demo.exception.NotBindException;
 import io.buji.pac4j.subject.Pac4jPrincipal;
 import org.aspectj.lang.JoinPoint;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.web.servlet.ModelAndView;
 
 /**
  * github处理策略
@@ -38,10 +38,11 @@ public class GitHubClientStrategy implements ClientStrategy {
     }
 
     @Override
-    public void handle(JoinPoint joinPoint) throws Exception {
+    public void handle(JoinPoint joinPoint, Pac4jPrincipal pac4jPrincipal) throws Exception {
         //todo 未登录转发页面处理
-        logger.warn("GitHub绑定跳转逻辑尚未处理。。。");
-//        return new ModelAndView("redirect:bind/github");
+        logger.debug("GitHub用户未绑定");
+        //抛出异常进行吹
+        throw new NotBindException().setClientName(name()).setRedirectUrl("bind/github").setPrincipal(pac4jPrincipal);
     }
 
     @Override
