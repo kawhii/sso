@@ -1,5 +1,23 @@
+<!DOCTYPE html>
 <!--
   ~ 版权所有.(c)2008-2017. 卡尔科技工作室
   -->
 
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>shiro client</title>
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+</head>
+<body>
 GitHub bind page...
+<form action="/bind/user">
+    用户：<!--/*@thymesVar id="user" type="java.lang.String"*/-->
+    <input name="user"  th:value="${user}"/>
+    <input type="submit" value="绑定"/>
+</form>
+</body>
+</html>

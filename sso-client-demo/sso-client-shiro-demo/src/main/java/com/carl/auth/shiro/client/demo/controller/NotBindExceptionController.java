@@ -24,12 +24,11 @@ public class NotBindExceptionController {
     /**
      * 抛出未绑定异常时进行转发页面处理
      *
-     * @param request
      * @param e
      * @return
      */
     @ExceptionHandler(value = NotBindException.class)
-    public ModelAndView notBindHandler(HttpServletRequest request, NotBindException e) {
+    public ModelAndView notBindHandler(NotBindException e) {
         return new ModelAndView("redirect:" + e.getRedirectUrl());
     }
 }

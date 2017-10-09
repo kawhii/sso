@@ -5,6 +5,7 @@
 package com.carl.auth.shiro.client.demo.core.github;
 
 import com.carl.auth.shiro.client.demo.core.PrincipalBindResolver;
+import io.buji.pac4j.subject.Pac4jPrincipal;
 
 import java.util.List;
 
@@ -33,5 +34,11 @@ public class GitHubMemoryPrincipalBindResolver implements PrincipalBindResolver 
     @Override
     public boolean isBind(String id) {
         return this.idStorage.contains(id);
+    }
+
+    @Override
+    public void bind(Pac4jPrincipal principal, Object user) {
+        //添加即为绑定，因为切面那边判断访问首页时，是否已经在当前容器存在该用户
+        getIdStorage().add(user.toString());
     }
 }

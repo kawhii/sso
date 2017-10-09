@@ -7,6 +7,7 @@ package com.carl.auth.shiro.client.demo.confg;
 import com.carl.auth.shiro.client.demo.confg.pros.GithubProperties;
 import com.carl.auth.shiro.client.demo.core.ClientStrategy;
 import com.carl.auth.shiro.client.demo.core.ClientStrategyFactory;
+import com.carl.auth.shiro.client.demo.core.PrincipalBindResolver;
 import com.carl.auth.shiro.client.demo.core.github.GitHubClientStrategy;
 import com.carl.auth.shiro.client.demo.core.github.GitHubMemoryPrincipalBindResolver;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,9 +32,18 @@ public class ClientConfiguration {
     @Bean
     protected ClientStrategyFactory clientStrategyFactory() {
         Map<String, ClientStrategy> clientStrategyMap = new HashMap<>();
-        GitHubMemoryPrincipalBindResolver gitHubBinder = new GitHubMemoryPrincipalBindResolver(properties.getBindId());
-        GitHubClientStrategy clientStrategy = new GitHubClientStrategy(gitHubBinder);
+        GitHubClientStrategy clientStrategy = new GitHubClientStrategy(bindResolver());
         clientStrategyMap.put(clientStrategy.name(), clientStrategy);
         return new ClientStrategyFactory(clientStrategyMap);
+    }
+
+    /**
+     * 绑定用户取决器
+     * @return
+     */
+    @Bean
+    protected PrincipalBindResolver bindResolver() {
+        GitHubMemoryPrincipalBindResolver gitHubBinder = new GitHubMemoryPrincipalBindResolver(properties.getBindId());
+        return gitHubBinder;
     }
 }
