@@ -118,9 +118,7 @@
                                 <exclude>WEB-INF/classes/services/*</exclude>
                                 <exclude>WEB-INF/classes/application.*</exclude>
                                 <exclude>WEB-INF/classes/bootstrap.properties</exclude>
-                                <exclude>WEB-INF/classes/apereo.properties</exclude>
                                 <exclude>**/user-details.properties</exclude>
-                                <exclude>**/messages_*.properties</exclude>
                                 <exclude>**/truststore.jks</exclude>
                                 <exclude>**/*.md</exclude>
                             </excludes>
