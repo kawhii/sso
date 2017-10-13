@@ -28,9 +28,9 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
-        <cas.version>5.1.4</cas.version>
+        <cas.version>5.1.5</cas.version>
         <springboot.version>1.5.3.RELEASE</springboot.version>
-        <spring-cloud.version>Dalston.SR3</spring-cloud.version>
+        <spring-cloud.version>Dalston.SR4</spring-cloud.version>
         <java.cas.client.version>3.4.1</java.cas.client.version>
     </properties>
 

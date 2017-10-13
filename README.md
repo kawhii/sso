@@ -50,13 +50,13 @@
 ## 模块介绍
 
 
-| 模块名 |模块介绍|备注|端口情况|必须https|path|启动循序
-|:-------|:-------|:-------|:----|:-------|:-----|:--|
-|sso-server|cas服务|接入鉴权|8443|√|cas|2|
-|sso-config|配置中心|管理各个服务配置|8888|×|config|1|
-|sso-management|service管理|接入管理|8081|×|cas-management|3|
-|sso-cas-client-demo|cas-client-demo|cas-client集成|8080|×|/sample|4|
-|sso-client-shiro-demo|shiro-client-demo|shiro-client集成|8083|×|/|5|
+| 模块名 |模块介绍|端口情况|必须https|path|启动循序
+|:-------|:-------|:----|:-------|:-----|:--|
+|sso-server|cas服务|8443|√|cas|2|
+|sso-config|配置中心|8888|×|config|1|
+|sso-management|service管理|8081|×|cas-management|3|
+|sso-cas-client-demo|cas-client-demo|8080|×|/sample|4|
+|sso-client-shiro-demo|shiro-client-demo|8083|×|/|5|
 
 ## 代码下载 [![码云](https://img.shields.io/badge/download-码云-yellowgreen.svg)](https://git.oschina.net/Kawhi-Carl/sso) [![Github](https://img.shields.io/badge/download-GitHub-brightgreen.svg)](https://github.com/laomazi2006/sso)
 

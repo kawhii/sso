@@ -34,7 +34,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
-        <spring-cloud.version>Dalston.SR3</spring-cloud.version>
+        <spring-cloud.version>Dalston.SR4</spring-cloud.version>
         <shiro.version>1.4.0</shiro.version>
         <buji.version>3.0.0</buji.version>
         <pac4j.version>2.0.0</pac4j.version>
