@@ -89,6 +89,9 @@
         <AsyncLogger name="org.springframework.jdbc" level="debug" additivity="false">
             <AppenderRef ref="casConsole"/>
         </AsyncLogger>
+        <AsyncLogger name="org.apereo.cas.logout" level="debug" additivity="false">
+            <AppenderRef ref="casConsole"/>
+        </AsyncLogger>
         <AsyncLogger name="org.springframework.boot.autoconfigure.security" level="info" additivity="false">
             <AppenderRef ref="casConsole"/>
             <AppenderRef ref="casFile"/>

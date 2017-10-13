@@ -19,6 +19,8 @@
 <p>A sample web application that exercises the CAS protocol features via the Java CAS Client.</p>
 <hr>
 
+<a href="https://passport.sso.com:8443/cas/logout?service=http%3A%2F%2Flocalhost%3A8080%2Fsample">logout</a>
+
 <p><b>Authenticated User Id:</b> <a href="logout.jsp" title="Click here to log out"><%= request.getRemoteUser() %>
 </a></p>
 

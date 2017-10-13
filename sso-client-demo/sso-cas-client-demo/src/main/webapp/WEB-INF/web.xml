@@ -12,6 +12,9 @@
        <param-value>true</param-value>
    </context-param>
 -->
+    <listener>
+        <listener-class>org.jasig.cas.client.session.SingleSignOutHttpSessionListener</listener-class>
+    </listener>
 
     <filter>
         <filter-name>CAS Single Sign Out Filter</filter-name>
@@ -21,10 +24,6 @@
             <param-value>https://passport.sso.com:8443/cas</param-value>
         </init-param>
     </filter>
-
-    <listener>
-        <listener-class>org.jasig.cas.client.session.SingleSignOutHttpSessionListener</listener-class>
-    </listener>
 
     <filter>
         <filter-name>CAS Authentication Filter</filter-name>
