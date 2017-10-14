@@ -1,0 +1,10 @@
+{
+  "@class": "org.apereo.cas.services.RegexRegisteredService",
+  "serviceId" : "^(https|imaps|http)://localhost:8083.*",
+  "name": "ShiroClient-demo",
+  "id": 10000000,
+  "description": "ShiroClient-demo service",
+  "evaluationOrder": 100,
+  "theme":"apereo",
+  "logoutUrl": "http://localhost:8083/logout"
+}

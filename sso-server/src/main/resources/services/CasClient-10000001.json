@@ -1,0 +1,10 @@
+{
+  "@class": "org.apereo.cas.services.RegexRegisteredService",
+  "serviceId" : "^(https|imaps|http)://localhost:8080/sample.*",
+  "name": "CasClient-demo",
+  "id": 10000001,
+  "description": "CasClient-demo service",
+  "evaluationOrder": 100,
+  "theme":"apereo",
+  "logoutUrl": "http://localhost:8080/sample/"
+}

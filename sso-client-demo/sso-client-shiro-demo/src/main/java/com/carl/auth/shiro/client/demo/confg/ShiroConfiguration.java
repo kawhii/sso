@@ -6,6 +6,7 @@ package com.carl.auth.shiro.client.demo.confg;
 
 
 import io.buji.pac4j.filter.CallbackFilter;
+import io.buji.pac4j.filter.LogoutFilter;
 import io.buji.pac4j.filter.SecurityFilter;
 import io.buji.pac4j.subject.Pac4jSubjectFactory;
 import org.apache.shiro.mgt.DefaultSecurityManager;
@@ -43,6 +44,8 @@ public class ShiroConfiguration extends AbstractShiroWebFilterConfiguration {
     private String casLoginUrl;
     @Value("#{ @environment['cas.callbackUrl'] ?: null }")
     private String callbackUrl;
+    @Value("#{ @environment['cas.serviceUrl'] ?: null }")
+    private String serviceUrl;
 
 
     /**
@@ -121,6 +124,7 @@ public class ShiroConfiguration extends AbstractShiroWebFilterConfiguration {
     public ShiroFilterChainDefinition shiroFilterChainDefinition() {
         DefaultShiroFilterChainDefinition definition = new DefaultShiroFilterChainDefinition();
         definition.addPathDefinition("/callback", "callbackFilter");
+        definition.addPathDefinition("/logout", "logoutFilter");
         definition.addPathDefinition("/**", "casSecurityFilter");
         return definition;
     }
@@ -155,6 +159,12 @@ public class ShiroConfiguration extends AbstractShiroWebFilterConfiguration {
         CallbackFilter callbackFilter = new CallbackFilter();
         callbackFilter.setConfig(casConfig());
         filters.put("callbackFilter", callbackFilter);
+
+        LogoutFilter logoutFilter = new LogoutFilter();
+        logoutFilter.setConfig(casConfig());
+        logoutFilter.setCentralLogout(true);
+        logoutFilter.setDefaultUrl(serviceUrl);
+        filters.put("logoutFilter", logoutFilter);
         return filters;
     }
 }
