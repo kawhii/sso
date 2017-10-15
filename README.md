@@ -25,10 +25,20 @@
 9. 授权码持久化配置、票据持久化配置
 10. CAS多系统安全
 11. CAS client demo测试单点登录
-12. Pa4j客户端单点登录整合
+12. Pac4j客户端单点登录整合
 13. Rest协议认证
 14. Shiro代理认证
 15. OAuth协议对接
+
+# 特性
+
+* GitHub授权登录
+* Cas Clint、Shiro Pac4j Client集成
+* jdbc用户密码加密
+* 自定义主题
+* 配置统一管理
+* 根据官网5.1.x新版本迭代
+* 各阶段发布博客教程
 
 
 ## Tutorial: [![Csdn Blog Tutorial](https://img.shields.io/badge/csdn%20blog-tutorial-orange.svg)](http://blog.csdn.net/u010475041/article/category/7156505)
