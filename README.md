@@ -39,6 +39,7 @@
 * 配置统一管理
 * 根据官网5.1.x新版本迭代
 * 各阶段发布博客教程
+* 忘记密码修改
 
 
 ## Tutorial: [![Csdn Blog Tutorial](https://img.shields.io/badge/csdn%20blog-tutorial-orange.svg)](http://blog.csdn.net/u010475041/article/category/7156505)
@@ -56,6 +57,10 @@
 |zhangsan|12345678|√||
 |zhaosi|12345|×|禁用|
 |wangwu|1234|√|需修改密码|
+
+### 注意
+* 由于修改密码功能目前是发送到笔者的邮箱，若调整，需要修改`sso-server/src/main/resources/profile/dev/sql/data-dev.sql`
+* 密码修改功能可以关闭问题回答功能
 
 ## 模块介绍
 
