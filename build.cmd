@@ -14,12 +14,13 @@
 @if "%1" == "shiro-client-demo" call:shiro-client-demo %2 %3 %4
 @if "%1" == "help" call:help
 @if "%1" == "run-all" call:run-all
+@if "%1" == "hosts" call:hosts
 
 @rem function section starts here
 @goto:eof
 
 :help
-    @echo "Usage: build.bat [help|sso-server|sso-management|sso-config|cas-client-demo|shiro-client-demo|run-all]"
+    @echo "Usage: build.bat [help|sso-server|sso-management|sso-config|cas-client-demo|shiro-client-demo|run-all|hosts]"
 
     @echo "sso-server: CAS server to run(2)"
     @echo "sso-management: Cas Management"
@@ -27,6 +28,7 @@
     @echo "cas-client-demo: CasClient Demo"
     @echo "shiro-client-demo: ShiroDemo"
     @echo "run-all: Run all server"
+    @echo "hosts: set '127.0.0.1 passport.sso.cm' to HOSTS"
 @goto:eof
 
 :sso-server
@@ -56,4 +58,10 @@
 
 :run-all
 	@echo TODO...
+@goto:eof
+
+:hosts
+	@echo start to set hosts...
+	@echo 127.0.0.1 passport.sso.co >>C:\WINDOWS\system32\drivers\etc\hosts
+	@echo success.
 @goto:eof
