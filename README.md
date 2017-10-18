@@ -8,7 +8,7 @@
 * 监控平台
 * 客户端集成(cas client、pac4j、shiro)
 
-并且在博客中记录整个大家过程以及注意事项
+并且在博客中记录整个搭建过程以及注意事项，目前教程如下：
 
 ![目前教程](http://img.blog.csdn.net/20171019000741357?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdTAxMDQ3NTA0MQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
 
@@ -22,7 +22,7 @@
 * 配置统一管理
 * 根据官网5.1.x新版本迭代
 * 各阶段发布博客教程
-* 忘记密码修改
+* 密码管理
 * 开箱即用
 
 
