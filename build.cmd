@@ -32,28 +32,28 @@
 @goto:eof
 
 :sso-server
-	@echo Startting sso server...
-    call sso-server/build.cmd run
+	@echo Stating sso server...
+	call cmd /k start "sso-server" %cd%/sso-server/build.cmd run
 @goto:eof
 
 :sso-management
-	@echo Startting cas management...
-    call sso-management /build.cmd run
+	@echo Stating cas management...
+    call cmd /k start "sso-management" %cd%/sso-management/build.cmd run
 @goto:eof
 
 :sso-config
-	@echo Startting config Server...
-    call %MAVEN_CMD% spring-boot:run -T 5 %1 %2 %3 -f sso-config/pom.xml
+	@echo Stating config Server...
+	call cmd /k start "sso-config" %MAVEN_CMD% spring-boot:run -T 5 %1 %2 %3 -f sso-config/pom.xml
 @goto:eof
 
 :cas-client-demo
-	@echo Startting cas client demo...
-    call %MAVEN_CMD% jetty:run -f sso-client-demo/sso-cas-client-demo/pom.xml
+	@echo Stating cas client demo...
+	call cmd /k start "cas-client-demo" %MAVEN_CMD% jetty:run -f sso-client-demo/sso-cas-client-demo/pom.xml
 @goto:eof
 
 :shiro-client-demo
-	@echo Startting shiro client demo...
-    call %MAVEN_CMD% spring-boot:run -T 5 %1 %2 %3 -f sso-client-demo/sso-client-shiro-demo/pom.xml
+	@echo Stating shiro client demo...
+	call cmd /k start "shiro-client-demo" %MAVEN_CMD% spring-boot:run -T 5 %1 %2 %3 -f sso-client-demo/sso-client-shiro-demo/pom.xml
 @goto:eof
 
 :run-all
