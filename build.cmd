@@ -23,9 +23,9 @@
 :help
     @echo "Usage: build.bat [help|sso-server|sso-management|sso-config|cas-client-demo|shiro-client-demo|run-all|hosts]"
 
-    @echo 1. sso-server: CAS server to run(2)
-    @echo 2. sso-management: Cas Management
-    @echo 3. sso-config: Config Server(1)"
+    @echo 1. sso-config: Config Server
+    @echo 2. sso-server: CAS Server
+    @echo 3. sso-management: Cas Management
     @echo 4. cas-client-demo: CasClient Demo
     @echo 5. shiro-client-demo: ShiroDemo
     @echo 6. run: Run all server
