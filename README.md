@@ -40,6 +40,7 @@
 * 根据官网5.1.x新版本迭代
 * 各阶段发布博客教程
 * 忘记密码修改
+* 开箱即用
 
 
 ## Tutorial: [![Csdn Blog Tutorial](https://img.shields.io/badge/csdn%20blog-tutorial-orange.svg)](http://blog.csdn.net/u010475041/article/category/7156505)
@@ -82,6 +83,53 @@
 
 * jdk8
 * maven3
+
+### 帮助
+```cmd
+build.cmd help
+```
+输出以下帮助信息
+```cmd
+"Usage: build.bat [help|sso-server|sso-management|sso-config|cas-client-demo|shiro-client-demo|run-all|hosts]"
+1. sso-server: CAS server to run(2)
+2. sso-management: Cas Management
+3. sso-config: Config Server(1)"
+4. cas-client-demo: CasClient Demo
+5. shiro-client-demo: ShiroDemo
+6. run: Run all server
+7. init: set '127.0.0.1 passport.sso.cm' to HOSTS, import cert to D:\soft\work\java\jdk1.8-144\jre\lib\security\cacerts
+```
+
+### 初始化
+
+1. 负责把`passport.sso.com`设置到host文件
+2. 把域名自签名证书导入到java环境（提示信息，第一个需要输入密码为**123456**，第二个导入密码为**changeit**）
+
+```cmd
+build.cmd init
+```
+
+### 启动服务
+
+> 由于启动服务多，开始占用CPU、内容稍高
+
+```cmd
+build.cmd run
+```
+
+
+* sso-config [配置中心](http://passport.sso.com:8888/config)
+* sso-server [单点登录服务](https://passport.sso.com:8443/cas)
+* cas-client-demo [cas客户端](http://passport.sso.com:8080/sample)
+* shiro-client-demo [shiro客户端](http://passport.sso.com:8083)
+* sso-management [服务管理客户端](http://passport.sso.com:8081/cas-management)
+
+```cmd
+#server-id 为上面的各服务名称，
+#如启动sso-management为，build.cmd sso-management
+
+build.cmd [server-id]
+```
 
 # 联系方式
 

@@ -14,8 +14,7 @@
 @if "%1" == "cas-client-demo" call:cas-client-demo %2 %3 %4
 @if "%1" == "shiro-client-demo" call:shiro-client-demo %2 %3 %4
 @if "%1" == "help" call:help
-@if "%1" == "run-all" call:run-all
-@if "%1" == "hosts" call:hosts
+@if "%1" == "run" call:run-all
 @if "%1" == "init" call:init
 
 @rem function section starts here
@@ -24,13 +23,13 @@
 :help
     @echo "Usage: build.bat [help|sso-server|sso-management|sso-config|cas-client-demo|shiro-client-demo|run-all|hosts]"
 
-    @echo "sso-server: CAS server to run(2)"
-    @echo "sso-management: Cas Management"
-    @echo "sso-config: Config Server(1)"
-    @echo "cas-client-demo: CasClient Demo"
-    @echo "shiro-client-demo: ShiroDemo"
-    @echo "run-all: Run all server"
-    @echo "hosts: set '127.0.0.1 passport.sso.cm' to HOSTS"
+    @echo 1. sso-server: CAS server to run(2)
+    @echo 2. sso-management: Cas Management
+    @echo 3. sso-config: Config Server(1)"
+    @echo 4. cas-client-demo: CasClient Demo
+    @echo 5. shiro-client-demo: ShiroDemo
+    @echo 6. run: Run all server
+    @echo 7. init: set '127.0.0.1 passport.sso.cm' to HOSTS, import cert to %JAVA_HOME%\jre\lib\security\cacerts
 @goto:eof
 
 :sso-server
@@ -65,21 +64,27 @@
 	start "shiro-client-demo" %MAVEN_CMD% spring-boot:run -T 5 %1 %2 %3 -f sso-client-demo/sso-client-shiro-demo/pom.xml
 @goto:eof
 
+
+::运行所有服务
 :run-all
 	@echo Starting run all...
+	call %MAVEN_CMD% clean
 	call:sso-config
 	call:sso-server
 	call:cas-client-demo
 	call:shiro-client-demo
 	call:sso-management
+	@echo All server have started.
 @goto:eof
 
-:hosts
-	@echo start to set hosts...
-	@echo 127.0.0.1 passport.sso.co >>C:\WINDOWS\system32\drivers\etc\hosts
-	@echo success.
-@goto:eof
 
+::导入证书到java环境、设置host
 :init
 	@echo init ssl and hosts...
+	::@echo 127.0.0.1 passport.sso.co >>C:\WINDOWS\system32\drivers\etc\hosts
+	if exist "tomcat.cer" (echo file exists delete... & del tomcat.cer)
+	echo Enter password: "123456"
+	keytool -exportcert -alias passport.sso.com -keystore %CURR_DIR%/sso-server/src/main/resources/tomcat.keystore  -file tomcat.cer -rfc
+	echo Enter password: "changeit" and next to Y
+	keytool -import -alias passport.sso.com -keystore %JAVA_HOME%\jre\lib\security\cacerts -file tomcat.cer -trustcacerts
 @goto:eof
