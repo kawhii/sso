@@ -74,9 +74,9 @@ build.cmd help
 输出以下帮助信息
 ```cmd
 "Usage: build.bat [help|sso-server|sso-management|sso-config|cas-client-demo|shiro-client-demo|run-all|hosts]"
-1. sso-server: CAS server to run(2)
-2. sso-management: Cas Management
-3. sso-config: Config Server(1)"
+1. sso-config: Config Server
+2. sso-server: CAS Server
+3. sso-management: Cas Management
 4. cas-client-demo: CasClient Demo
 5. shiro-client-demo: ShiroDemo
 6. run: Run all server
