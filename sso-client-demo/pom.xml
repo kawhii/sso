@@ -17,6 +17,7 @@
     <modules>
         <module>sso-cas-client-demo</module>
         <module>sso-client-shiro-demo</module>
+        <module>sso-client-proxy-demo</module>
     </modules>
     <artifactId>sso-client-demo</artifactId>
 

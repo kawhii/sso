@@ -144,8 +144,6 @@ public class ShiroConfiguration extends AbstractShiroWebFilterConfiguration {
         filterFactoryBean.setFilters(shiroFilters());
         return filterFactoryBean;
     }
-
-
     /**
      * 对shiro的过滤策略进行明确
      * @return

@@ -1,0 +1,9 @@
+logging:
+  file: "logs/sso-demo-proxy.log"
+
+---
+server:
+  port: 8808
+spring:
+  application:
+    name: client-proxy
