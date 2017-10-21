@@ -33,8 +33,9 @@ public class UserController {
     public Object qq(@RequestParam("access_token") String access_token, HttpServletResponse response) {
         ResponseEntity<String> resp =  restTemplate.exchange("https://graph.qq.com/oauth2.0/me?access_token=" + access_token, HttpMethod.GET, null, String.class);
         String res = resp.getBody();
-        response.setStatus(resp.getStatusCodeValue());
+        //todo 这里应该判断拿不到open应该为失败，设置错误状态码
+
         response.setContentType("application/json");
-        return res.replace("callback( ","").replace(" );", "");
+        return res.replace("callback( ","").replace(" );", "").replace("\n", "");
     }
 }

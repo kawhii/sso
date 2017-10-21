@@ -64,6 +64,12 @@
 	start "shiro-client-demo" %MAVEN_CMD% spring-boot:run -T 5 %1 %2 %3 -f sso-client-demo/sso-client-shiro-demo/pom.xml
 @goto:eof
 
+:sso-client-proxy-demo
+	@echo Stating proxy client demo...
+	cd %CURR_DIR%
+	start "sso-client-proxy-demo" %MAVEN_CMD% spring-boot:run -T 5 %1 %2 %3 -f sso-client-demo/sso-client-proxy-demo/pom.xml
+@goto:eof
+
 
 ::运行所有服务
 :run-all
@@ -74,6 +80,7 @@
 	call:cas-client-demo
 	call:shiro-client-demo
 	call:sso-management
+	call:sso-client-proxy-demo
 	@echo All server have started.
 @goto:eof
 
