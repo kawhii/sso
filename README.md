@@ -23,8 +23,9 @@
 * 根据官网5.1.x新版本迭代
 * 各阶段发布博客教程
 * 密码管理
-* 开箱即用
-
+* 一键启动
+* 第三方登录接入(QQ,WeChat,CSDN,GitHub)
+* 绑定用户
 
 ## Tutorial: [![Csdn Blog Tutorial](https://img.shields.io/badge/csdn%20blog-tutorial-orange.svg)](http://blog.csdn.net/u010475041/article/category/7156505)
 
@@ -56,6 +57,7 @@
 |sso-management|service管理|8081|×|cas-management|3|
 |sso-cas-client-demo|cas-client-demo|8080|×|/sample|4|
 |sso-client-shiro-demo|shiro-client-demo|8083|×|/|5|
+|sso-client-proxy-demo|OAuth2代理转发客户端|8808|×|/||
 
 ## 代码下载 [![码云](https://img.shields.io/badge/download-码云-yellowgreen.svg)](https://git.oschina.net/Kawhi-Carl/sso) [![Github](https://img.shields.io/badge/download-GitHub-brightgreen.svg)](https://github.com/laomazi2006/sso)
 
