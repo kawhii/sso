@@ -10,7 +10,7 @@
 
     <groupId>com.carl.auth</groupId>
     <artifactId>sso</artifactId>
-    <version>1.6.0-RC2-SNAPSHOT</version>
+    <version>1.6.0-RC2</version>
     <packaging>pom</packaging>
 
     <modules>
