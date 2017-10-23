@@ -45,15 +45,6 @@
             <id>maven2-release</id>
             <url>http://uk.maven.org/maven2/</url>
         </repository>
-        <repository>
-            <snapshots>
-                <enabled>true</enabled>
-                <!--快照版本库两个小时检查更新一遍-->
-                <updatePolicy>interval:120</updatePolicy>
-            </snapshots>
-            <id>oss-snapshots</id>
-            <url>http://repository.jboss.org/nexus/content/groups/public/</url>
-        </repository>
     </repositories>
 
     <pluginRepositories>

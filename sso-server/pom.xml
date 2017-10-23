@@ -27,20 +27,15 @@
             <artifactId>cas-server-support-mongo-service-registry</artifactId>
             <version>${cas.version}</version>
         </dependency>-->
+        <dependency>
+            <groupId>com.carl.auth</groupId>
+            <artifactId>sso-support-custom-auth</artifactId>
+            <version>${project.version}</version>
+        </dependency>
         <!--代理认证-->
         <dependency>
             <groupId>org.apereo.cas</groupId>
             <artifactId>cas-server-support-pac4j-webflow</artifactId>
-            <version>${cas.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apereo.cas</groupId>
-            <artifactId>cas-server-support-actions</artifactId>
-            <version>${cas.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apereo.cas</groupId>
-            <artifactId>cas-server-webapp-config</artifactId>
             <version>${cas.version}</version>
         </dependency>
         <dependency>
