@@ -38,12 +38,12 @@ public class CustomWebflowConfigurer extends DefaultWebflowConfigurer {
             final ViewState state = (ViewState) flow.getState(CasWebflowConstants.STATE_ID_VIEW_LOGIN_FORM);
             final BinderConfiguration cfg = getViewStateBinderConfiguration(state);
             cfg.addBinding(new BinderConfiguration.Binding("rememberMe", null, false));
-            cfg.addBinding(new BinderConfiguration.Binding("system", null, true));
+            cfg.addBinding(new BinderConfiguration.Binding("system", null, false));
         } else {
             createFlowVariable(flow, CasWebflowConstants.VAR_ID_CREDENTIAL, UsernamePasswordSysCredential.class);
             final ViewState state = (ViewState) flow.getState(CasWebflowConstants.STATE_ID_VIEW_LOGIN_FORM);
             final BinderConfiguration cfg = getViewStateBinderConfiguration(state);
-            cfg.addBinding(new BinderConfiguration.Binding("system", null, true));
+            cfg.addBinding(new BinderConfiguration.Binding("system", null, false));
         }
     }
 }

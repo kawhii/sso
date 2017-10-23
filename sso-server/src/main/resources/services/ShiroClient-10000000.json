@@ -5,6 +5,6 @@
   "id": 10000000,
   "description": "ShiroClient-demo service",
   "evaluationOrder": 100,
-  "theme":"apereo",
+  "theme":"demo",
   "logoutUrl": "http://localhost:8083/logout"
 }

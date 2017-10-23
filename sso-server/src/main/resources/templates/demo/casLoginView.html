@@ -49,6 +49,22 @@
             </div>
         </section>
 
+        <section class="row">
+            <label for="system" >系统</label>
+            <div>
+                <select class="required"
+                        id="system"
+                        tabindex="2"
+                        th:accesskey="#{screen.welcome.label.password.accesskey}"
+                        th:field="*{system}"
+                        autocomplete="off">
+                    <option value="sso">SSO</option>
+                    <option value="oa">OA</option>
+                    <option value="crm">CRM</option>
+                </select>
+            </div>
+        </section>
+
         <section>
             <input type="hidden" name="execution" th:value="${flowExecutionKey}"/>
             <input type="hidden" name="_eventId" value="submit"/>
