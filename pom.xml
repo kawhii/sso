@@ -19,6 +19,7 @@
         <module>sso-spring-dependencies</module>
         <module>sso-management</module>
         <module>sso-client-demo</module>
+        <module>sso-support</module>
     </modules>
 
 
