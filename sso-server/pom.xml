@@ -40,11 +40,6 @@
         </dependency>
         <dependency>
             <groupId>org.apereo.cas</groupId>
-            <artifactId>cas-server-support-captcha</artifactId>
-            <version>${cas.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apereo.cas</groupId>
             <artifactId>cas-server-webapp-tomcat</artifactId>
             <version>${cas.version}</version>
             <type>war</type>

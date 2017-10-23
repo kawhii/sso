@@ -34,7 +34,7 @@ public class CustomerAuthWebflowConfiguration {
     @Qualifier("builder")
     private FlowBuilderServices builder;
 
-    @Bean
+    @Bean("defaultWebflowConfigurer")
     public CasWebflowConfigurer defaultWebflowConfigurer() {
         final CustomWebflowConfigurer c = new CustomWebflowConfigurer(builder, loginFlowRegistry);
         c.setLogoutFlowDefinitionRegistry(logoutFlowRegistry);
