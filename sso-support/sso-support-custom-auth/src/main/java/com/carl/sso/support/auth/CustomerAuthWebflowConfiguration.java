@@ -5,10 +5,12 @@
 package com.carl.sso.support.auth;
 
 import com.carl.sso.support.auth.flow.CustomWebflowConfigurer;
+import org.apereo.cas.config.CasWebflowContextConfiguration;
 import org.apereo.cas.configuration.CasConfigurationProperties;
 import org.apereo.cas.web.flow.CasWebflowConfigurer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.boot.autoconfigure.AutoConfigureBefore;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -22,6 +24,7 @@ import org.springframework.webflow.engine.builder.support.FlowBuilderServices;
  */
 @Configuration("customerAuthWebflowConfiguration")
 @EnableConfigurationProperties(CasConfigurationProperties.class)
+@AutoConfigureBefore(value = CasWebflowContextConfiguration.class)
 public class CustomerAuthWebflowConfiguration {
     @Autowired
     @Qualifier("logoutFlowRegistry")
@@ -34,8 +37,8 @@ public class CustomerAuthWebflowConfiguration {
     @Qualifier("builder")
     private FlowBuilderServices builder;
 
-    @Bean("defaultWebflowConfigurer")
-    public CasWebflowConfigurer defaultWebflowConfigurer() {
+    @Bean
+    public CasWebflowConfigurer customWebflowConfigurer() {
         final CustomWebflowConfigurer c = new CustomWebflowConfigurer(builder, loginFlowRegistry);
         c.setLogoutFlowDefinitionRegistry(logoutFlowRegistry);
         return c;
