@@ -11,6 +11,7 @@
 * 目前使用sso情况
 * 是否对外开放
 * Cas版本
+* 集成客户端SDK(pac4j/cas-client)
 
 ## Bug
 
