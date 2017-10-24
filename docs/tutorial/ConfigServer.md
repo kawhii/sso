@@ -487,7 +487,7 @@ build.cmd run
 1. 简单介绍了微服务以及配置中心的作用
 2. 搭建了配置中心以及把sso-server的配置文件放置于配置中心以本地文件存储
 
-[代码下载](https://github.com/laomazi2006/sso/releases/tag/1.1.0)
+[代码下载](https://github.com/kawhii/sso/releases/tag/1.1.0)
 
 
 # 作者联系方式

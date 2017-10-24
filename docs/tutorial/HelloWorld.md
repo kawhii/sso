@@ -4,7 +4,7 @@
 
 **我们这次用到的cas版本为```5.1.3```**
 
-代码存放在[github](https://github.com/laomazi2006/sso)和[码云](https://gitee.com/Kawhi-Carl/sso)，欢迎大家[下载](https://github.com/laomazi2006/sso/releases)指点，也可以看[wiki](https://github.com/laomazi2006/sso/wiki)项目简介
+代码存放在[github](https://github.com/kawhii/sso)和[码云](https://gitee.com/Kawhi-Carl/sso)，欢迎大家[下载](https://github.com/kawhii/sso/releases)指点，也可以看[wiki](https://github.com/kawhii/sso/wiki)项目简介
 
 
 
@@ -422,7 +422,7 @@ build.cmd package
 1. 利用手脚架搭建了cas，并且进行了配置文件的调整
 2. 简单介绍了cas
 
-[代码下载](https://github.com/laomazi2006/sso/releases/tag/1.0.0)
+[代码下载](https://github.com/kawhii/sso/releases/tag/1.0.0)
 
 
 # 作者联系方式
