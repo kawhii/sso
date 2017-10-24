@@ -16,4 +16,4 @@ build.cmd init
 build.cmd run
 ```
 
-具体模块功能以及访问方式请打开[sso教程](https://laomazi2006.github.io/sso)
+具体模块功能以及访问方式请打开[sso教程](https://kawhii.github.io/sso)

@@ -1,4 +1,4 @@
-# [SSO](https://laomazi2006.github.io/sso/index.html) [![Build Status](https://travis-ci.org/laomazi2006/sso.svg?branch=master)](https://travis-ci.org/laomazi2006/sso) [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/laomazi2006/sso/master/LICENSE) [![GitHub issues](https://img.shields.io/github/issues/laomazi2006/sso.svg)](https://github.com/laomazi2006/sso/issues)
+# [SSO](https://kawhii.github.io/sso/index.html) [![Build Status](https://travis-ci.org/kawhii/sso.svg?branch=master)](https://travis-ci.org/kawhii/sso) [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/kawhii/sso/master/LICENSE) [![GitHub issues](https://img.shields.io/github/issues/kawhii/sso.svg)](https://github.com/kawhii/sso/issues)
 
 打造一个单点登录平台，其中包括以下子系统
 
@@ -30,7 +30,7 @@
 ## Tutorial: [![Csdn Blog Tutorial](https://img.shields.io/badge/csdn%20blog-tutorial-orange.svg)](http://blog.csdn.net/u010475041/article/category/7156505)
 
 * [Blog](http://blog.csdn.net/u010475041/article/category/7156505)
-* [Support](https://github.com/laomazi2006/sso/wiki)
+* [Support](https://github.com/kawhii/sso/wiki)
 
 域名：passport.sso.com
 
@@ -59,12 +59,12 @@
 |sso-client-shiro-demo|shiro-client-demo|8083|×|/|5|
 |sso-client-proxy-demo|OAuth2代理转发客户端|8808|×|/||
 
-## 代码下载 [![码云](https://img.shields.io/badge/download-码云-yellowgreen.svg)](https://git.oschina.net/Kawhi-Carl/sso) [![Github](https://img.shields.io/badge/download-GitHub-brightgreen.svg)](https://github.com/laomazi2006/sso)
+## 代码下载 [![码云](https://img.shields.io/badge/download-码云-yellowgreen.svg)](https://git.oschina.net/Kawhi-Carl/sso) [![Github](https://img.shields.io/badge/download-GitHub-brightgreen.svg)](https://github.com/kawhii/sso)
 
-1. 每一个阶段都会封版打一个tag，需要的进行[下载](https://github.com/laomazi2006/sso/releases)
+1. 每一个阶段都会封版打一个tag，需要的进行[下载](https://github.com/kawhii/sso/releases)
 2. 原始构建文件存在于original-files目录下
 
-## Development [![Dependency Status](https://www.versioneye.com/user/projects/59b6afd60fb24f004e1a656b/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/59b6afd60fb24f004e1a656b) <!-- [![Dependency Status](https://dependencyci.com/github/laomazi2006/sso/badge)](https://dependencyci.com/github/laomazi2006/sso)  -->[![codebeat badge](https://codebeat.co/badges/4b430ffd-0cb8-4310-b081-955a66e65c76)](https://codebeat.co/projects/github-com-laomazi2006-sso-master)
+## Development [![Dependency Status](https://www.versioneye.com/user/projects/59b6afd60fb24f004e1a656b/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/59b6afd60fb24f004e1a656b) <!-- [![Dependency Status](https://dependencyci.com/github/kawhii/sso/badge)](https://dependencyci.com/github/kawhii/sso)  -->[![codebeat badge](https://codebeat.co/badges/4b430ffd-0cb8-4310-b081-955a66e65c76)](https://codebeat.co/projects/github-com-kawhii-sso-master)
 
 * jdk8
 * maven3
