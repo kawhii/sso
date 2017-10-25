@@ -90,7 +90,7 @@
     echo init project...
     call mvn install
 	@echo init ssl and hosts...
-	::@echo 127.0.0.1 passport.sso.co >>C:\WINDOWS\system32\drivers\etc\hosts
+	::@echo 127.0.0.1 passport.sso.com >>C:\WINDOWS\system32\drivers\etc\hosts
 	if exist "tomcat.cer" (echo file exists delete... & del tomcat.cer)
 	echo Enter password: "123456"
 	keytool -exportcert -alias passport.sso.com -keystore %CURR_DIR%/sso-server/src/main/resources/tomcat.keystore  -file tomcat.cer -rfc
