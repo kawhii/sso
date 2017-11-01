@@ -6,12 +6,13 @@
 package com.carl.sso.support.captcha;
 
 
+
 /**
  * 验证码结果提供者
  *
  * @author Carl
  * @date 2017/10/27
- * @since 2.3.8
+ * @since
  */
 public interface ICaptchaResultProvider<T, S>{
     /**
@@ -28,5 +29,13 @@ public interface ICaptchaResultProvider<T, S>{
      * @return
      */
     S get(T t);
+
+    /**
+     * 校验
+     * @param store 持久化对象
+     * @param code 校验编码
+     * @return
+     */
+    boolean validate(T store, S code);
 }
 

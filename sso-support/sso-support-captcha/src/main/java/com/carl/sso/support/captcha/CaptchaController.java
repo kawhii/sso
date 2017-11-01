@@ -5,9 +5,10 @@
 
 package com.carl.sso.support.captcha;
 
-import org.springframework.web.bind.annotation.RequestMapping;
+
+import org.apereo.cas.web.AbstractDelegateController;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.servlet.ModelAndView;
-import org.springframework.web.servlet.mvc.Controller;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -18,10 +19,9 @@ import java.io.OutputStream;
  *
  * @author Carl
  * @date 2017/10/27
- * @since 2.3.8
+ * @since
  */
-@RequestMapping("/")
-public class CaptchaController implements Controller {
+public class CaptchaController extends AbstractDelegateController {
     private ICaptchaWriter<String> captchaWriter;
     private SessionCaptchaResultAware<String> aware;
 
@@ -39,13 +39,20 @@ public class CaptchaController implements Controller {
     }
 
 
-    @RequestMapping(value = CaptachaConstants.REQUEST_MAPPING)
+
     @Override
-    public ModelAndView handleRequest(HttpServletRequest request, HttpServletResponse response) throws Exception {
+    public boolean canHandle(HttpServletRequest request, HttpServletResponse response) {
+        return true;
+    }
+
+    @GetMapping(value = CaptchaConstants.REQUEST_MAPPING, produces = "image/png")
+    @Override
+    protected ModelAndView handleRequestInternal(HttpServletRequest request, HttpServletResponse response) throws Exception {
         //设置response头信息
         //禁止缓存
         response.setHeader("Pragma", "No-cache");
         response.setHeader("Cache-Control", "no-cache");
+        response.setContentType("image/png");
         response.setDateHeader("Expires", 0);
         OutputStream outputStream =  response.getOutputStream();
         //存储验证码到session

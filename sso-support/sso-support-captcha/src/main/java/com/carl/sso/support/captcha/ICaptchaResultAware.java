@@ -11,7 +11,7 @@ package com.carl.sso.support.captcha;
  *
  * @author Carl
  * @date 2017/10/27
- * @since 2.3.8
+ * @since
  */
 public interface ICaptchaResultAware<S, T> {
     /**

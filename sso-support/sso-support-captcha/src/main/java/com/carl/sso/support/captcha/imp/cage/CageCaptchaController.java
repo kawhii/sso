@@ -11,7 +11,6 @@ import com.carl.sso.support.captcha.SessionCaptchaResultAware;
 import com.carl.sso.support.captcha.SessionCaptchaResultProvider;
 import com.carl.sso.support.captcha.string.StringCaptchaResultAware;
 
-
 /**
  * Cage验证码控制器
  *
@@ -26,6 +25,10 @@ public class CageCaptchaController extends CaptchaController {
     }
 
     public CageCaptchaController() {
-        super(new CageStringCaptchaWriter(), new StringCaptchaResultAware(new SessionCaptchaResultProvider(),new CageStringTokenGenerator()));
+        super(new CageStringCaptchaWriter(), new StringCaptchaResultAware(new SessionCaptchaResultProvider(), new CageStringTokenGenerator()));
+    }
+
+    public CageCaptchaController(SessionCaptchaResultProvider provider) {
+        super(new CageStringCaptchaWriter(), new StringCaptchaResultAware(provider, new CageStringTokenGenerator()));
     }
 }
