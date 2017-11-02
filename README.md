@@ -26,6 +26,8 @@
 * 一键启动
 * 第三方登录接入(QQ,WeChat,CSDN,GitHub)
 * 绑定用户
+* 验证码输出
+* 自定义校验器
 
 ## Tutorial: [![Csdn Blog Tutorial](https://img.shields.io/badge/csdn%20blog-tutorial-orange.svg)](http://blog.csdn.net/u010475041/article/category/7156505)
 
