@@ -32,6 +32,11 @@
             <artifactId>sso-support-custom-auth</artifactId>
             <version>${project.version}</version>
         </dependency>
+        <dependency>
+            <groupId>com.carl.auth</groupId>
+            <artifactId>sso-support-captcha</artifactId>
+            <version>${project.version}</version>
+        </dependency>
         <!--代理认证-->
         <dependency>
             <groupId>org.apereo.cas</groupId>
