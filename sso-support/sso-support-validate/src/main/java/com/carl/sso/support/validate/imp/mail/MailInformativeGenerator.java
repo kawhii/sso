@@ -21,7 +21,8 @@ public class MailInformativeGenerator implements InformativeGenerator<MailInform
 
     @Override
     public MailInformative generate(MailCredential mailCredential) {
-        int code = (int)((Math.random()*9+1)*100000);
+        //生成随机码
+        int code = (int) ((Math.random() * 9 + 1) * Math.pow(10, properties.getCodeLen()));
         String strCode = String.valueOf(code);
         MailInformative informative = new MailInformative()
                 .setCode(strCode)

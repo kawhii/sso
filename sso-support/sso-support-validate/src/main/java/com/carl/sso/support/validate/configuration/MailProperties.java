@@ -21,6 +21,8 @@ public class MailProperties implements Serializable {
     private String subject = "统一门户注册验证码";
     //来自哪个用户发送
     private String from;
+    //验证码长度
+    private int codeLen = 6;
 
     public long getEffective() {
         return effective;
@@ -60,5 +62,13 @@ public class MailProperties implements Serializable {
 
     public void setFrom(String from) {
         this.from = from;
+    }
+
+    public int getCodeLen() {
+        return codeLen;
+    }
+
+    public void setCodeLen(int codeLen) {
+        this.codeLen = codeLen;
     }
 }

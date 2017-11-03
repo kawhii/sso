@@ -14,6 +14,7 @@ import javax.validation.constraints.NotNull;
  * @since 2.3.8
  */
 public class MailValidateCredential extends MailCredential implements ValidateCredential {
+    //校验码
     private String code;
 
     /**

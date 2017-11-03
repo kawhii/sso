@@ -22,6 +22,9 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.mail.javamail.JavaMailSender;
 
 /**
+ * 邮箱校验服务，当配置<code>sso.validate.mail.enable=true</code>
+ * 生效
+ *
  * @author Carl
  * @date 2017/11/2
  * @since
@@ -70,6 +73,7 @@ public class SSOMailValidateConfiguration {
     @ConditionalOnMissingBean(name = "defaultValidateService")
     @RefreshScope
     public DefaultValidateService defaultValidateService() {
+        //默认的邮箱校验服务
         DefaultValidateService service = new DefaultValidateService(
                 mailInformativeGenerator(),
                 mailStore(),

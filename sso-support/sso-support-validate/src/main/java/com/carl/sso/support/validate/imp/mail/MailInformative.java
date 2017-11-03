@@ -14,12 +14,19 @@ import java.util.Date;
  * @since
  */
 public class MailInformative implements Informative {
+    //发送邮件的from
     private String fromMail;
+    //目标邮箱
     private String toMail;
+    //邮件标题
     private String subject;
+    //邮件内容
     private String content;
+    //邮件编码
     private String code;
+    //有效时长，秒
     private long effective;
+    //信息唯一标志
     private String id;
 
 
