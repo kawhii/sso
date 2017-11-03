@@ -7,7 +7,6 @@ package com.carl.sso.support.validate.imp.mail;
 import com.carl.sso.support.validate.IStore;
 import com.carl.sso.support.validate.IValidator;
 import com.carl.sso.support.validate.ValidateResult;
-import com.wd.sso.support.validate.*;
 
 import java.util.Date;
 

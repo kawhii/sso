@@ -5,7 +5,6 @@
 package com.carl.sso.support.validate.core;
 
 import com.carl.sso.support.validate.*;
-import com.wd.sso.support.validate.*;
 import com.carl.sso.support.validate.exception.ValidateSenderException;
 
 /**
