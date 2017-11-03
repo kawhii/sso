@@ -18,6 +18,7 @@
     <modules>
         <module>sso-support-custom-auth</module>
         <module>sso-support-captcha</module>
+        <module>sso-support-validate</module>
     </modules>
 
 
