@@ -2,9 +2,8 @@
  * 版权所有.(c)2008-2017. 卡尔科技工作室
  */
 
-package com.carl.sso.support.auth.flow;
+package com.carl.sso.support.auth;
 
-import com.carl.sso.support.auth.UsernamePasswordSysCredential;
 import org.apereo.cas.web.flow.AbstractCasWebflowConfigurer;
 import org.apereo.cas.web.flow.CasWebflowConstants;
 import org.springframework.webflow.definition.registry.FlowDefinitionRegistry;

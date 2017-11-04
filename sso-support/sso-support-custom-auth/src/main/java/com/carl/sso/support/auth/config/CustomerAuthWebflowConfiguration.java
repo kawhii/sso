@@ -2,9 +2,10 @@
  * 版权所有.(c)2008-2017. 卡尔科技工作室
  */
 
-package com.carl.sso.support.auth;
 
-import com.carl.sso.support.auth.flow.CustomWebflowConfigurer;
+package com.carl.sso.support.auth.config;
+
+import com.carl.sso.support.auth.CustomWebflowConfigurer;
 import org.apereo.cas.config.CasWebflowContextConfiguration;
 import org.apereo.cas.configuration.CasConfigurationProperties;
 import org.apereo.cas.web.flow.CasWebflowConfigurer;

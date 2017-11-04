@@ -2,7 +2,8 @@
  * 版权所有.(c)2008-2017. 卡尔科技工作室
  */
 
-package com.carl.sso.support.auth;
+
+package com.carl.sso.support.auth.config;
 
 import com.carl.sso.support.auth.handler.UsernamePasswordSystemAuthenticationHandler;
 import org.apereo.cas.authentication.AuthenticationEventExecutionPlan;
