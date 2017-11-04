@@ -9,7 +9,7 @@
     <parent>
         <groupId>com.carl.auth</groupId>
         <artifactId>sso-spring-dependencies</artifactId>
-        <version>1.6.0-RC3</version>
+        <version>1.6.0-RC4-SNAPSHOT</version>
         <relativePath>../sso-spring-dependencies</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
