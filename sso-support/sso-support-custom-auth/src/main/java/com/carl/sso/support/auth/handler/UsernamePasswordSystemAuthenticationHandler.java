@@ -30,8 +30,10 @@ public class UsernamePasswordSystemAuthenticationHandler extends AbstractPreAndP
 
     @Override
     protected HandlerResult doAuthentication(Credential credential) throws GeneralSecurityException, PreventedException {
+        //当用户名为admin,并且system为sso即允许通过
         UsernamePasswordSysCredential sysCredential = (UsernamePasswordSysCredential) credential;
         if ("admin".equals(sysCredential.getUsername()) && "sso".equals(sysCredential.getSystem())) {
+            //这里可以自定义属性数据
             return createHandlerResult(credential, this.principalFactory.createPrincipal(((UsernamePasswordSysCredential) credential).getUsername(), Collections.emptyMap()), null);
         } else {
             throw new AccountNotFoundException("必须是admin用户才允许通过");

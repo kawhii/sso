@@ -14,7 +14,7 @@ import javax.validation.constraints.Size;
  *
  * @author Carl
  * @date 2017/10/23
- * @since 2.3.7
+ * @since
  */
 public class UsernamePasswordSysCredential extends RememberMeUsernamePasswordCredential {
     @Size(min = 2, message = "require system")

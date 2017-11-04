@@ -47,6 +47,7 @@ public class CustomAuthenticationEventExecutionPlanConfiguration implements Auth
                 servicesManager, jdbcPrincipalFactory, 1);
     }
 
+    //注册自定义认证器
     @Override
     public void configureAuthenticationExecutionPlan(final AuthenticationEventExecutionPlan plan) {
         plan.registerAuthenticationHandler(customAuthenticationHandler());
