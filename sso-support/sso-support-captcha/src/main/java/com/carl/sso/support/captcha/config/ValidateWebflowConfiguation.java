@@ -57,7 +57,6 @@ public class ValidateWebflowConfiguation {
     @Bean
     public CasWebflowConfigurer validateWebflowConfigurer() {
         ValidateWebflowConfigurer validateWebflowConfigurer = new ValidateWebflowConfigurer(flowBuilderServices, loginFlowDefinitionRegistry, applicationContext, casProperties);
-        validateWebflowConfigurer.initialize();
         return validateWebflowConfigurer;
     }
 
