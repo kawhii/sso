@@ -30,3 +30,12 @@ INSERT INTO SYS_USER_QUESTION VALUES ('admin', '使用过的密码是？',  '123
 INSERT INTO SYS_USER_QUESTION VALUES ('admin', '你的年龄是？',  '24');
 INSERT INTO SYS_USER_QUESTION VALUES ('zhangsan', '我的名字是？',  'zhangsan');
 INSERT INTO SYS_USER_QUESTION VALUES ('zhangsan', '我在哪里工作？',  'guangzhou');
+
+
+---用户属性表
+INSERT INTO SYS_ATTRS VALUES ('admin', 'group', 'ADMIN_ROLE');
+INSERT INTO SYS_ATTRS VALUES ('admin', 'group', 'MANAGEMENT_ROLE');
+INSERT INTO SYS_ATTRS VALUES ('admin', 'group', 'DEV_ROLE');
+INSERT INTO SYS_ATTRS VALUES ('admin', 'school', 'GuangZhou');
+INSERT INTO SYS_ATTRS VALUES ('admin', 'school', 'ZhuHai');
+INSERT INTO SYS_ATTRS VALUES ('zhangsan', 'group', 'DEV_ROLE');
