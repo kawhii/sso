@@ -6,5 +6,9 @@
   "description": "ShiroClient-demo service",
   "evaluationOrder": 100,
   "theme":"demo",
-  "logoutUrl": "http://localhost:8083/logout"
+  "logoutUrl": "http://localhost:8083/logout",
+  "attributeReleasePolicy" : {
+    "@class" : "org.apereo.cas.services.ReturnAllowedAttributeReleasePolicy",
+    "allowedAttributes" : [ "java.util.ArrayList", [ "school", "email" ] ]
+  }
 }
