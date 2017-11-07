@@ -9,6 +9,6 @@
   "logoutUrl": "http://localhost:8083/logout",
   "attributeReleasePolicy" : {
     "@class" : "org.apereo.cas.services.ReturnAllowedAttributeReleasePolicy",
-    "allowedAttributes" : [ "java.util.ArrayList", [ "school", "email" ] ]
+    "allowedAttributes" : [ "java.util.ArrayList", [ "school_multi", "email" ] ]
   }
 }
