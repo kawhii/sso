@@ -88,7 +88,7 @@
 ::导入证书到java环境、设置host
 :init
     echo init project...
-    call mvn install
+    call mvn clean install
 	@echo init ssl and hosts...
 	::@echo 127.0.0.1 passport.sso.com >>C:\WINDOWS\system32\drivers\etc\hosts
 	if exist "tomcat.cer" (echo file exists delete... & del tomcat.cer)
