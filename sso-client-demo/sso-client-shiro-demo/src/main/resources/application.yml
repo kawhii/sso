@@ -22,7 +22,7 @@ spring:
 spring:
   profiles: dev
 cas:
-  prefixUrl: https://passport.sso.com:8443/cas
+  prefixUrl: http://passport.sso.com:8443/cas
   loginUrl: ${cas.prefixUrl}/login
   serviceUrl: http://localhost:${server.port}
   callbackUrl: ${cas.serviceUrl}/callback

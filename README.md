@@ -108,7 +108,7 @@ build.cmd run
 
 
 * sso-config [配置中心](http://passport.sso.com:8888/config)
-* sso-server [单点登录服务](https://passport.sso.com:8443/cas)
+* sso-server [单点登录服务](http://passport.sso.com:8443/cas)
 * cas-client-demo [cas客户端](http://passport.sso.com:8080/sample)
 * shiro-client-demo [shiro客户端](http://passport.sso.com:8083)
 * sso-management [服务管理客户端](http://passport.sso.com:8081/cas-management)
