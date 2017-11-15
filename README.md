@@ -63,8 +63,8 @@
 |sso-management|service管理|8081|×|cas-management|3|
 |sso-cas-client-demo|cas-client-demo|8080|×|/sample|4|
 |sso-client-shiro-demo|shiro-client-demo|8083|×|/|5|
-|sso-client-proxy-demo|OAuth2代理转发客户端|8808|×|/||
-|sso-monitor|监控服务|8444|×|/||
+|sso-client-proxy-demo|OAuth2代理转发客户端|8808|×|/|6|
+|sso-monitor|监控服务|8444|×|/|7|
 
 ## 代码下载 [![码云](https://img.shields.io/badge/download-码云-yellowgreen.svg)](https://git.oschina.net/Kawhi-Carl/sso) [![Github](https://img.shields.io/badge/download-GitHub-brightgreen.svg)](https://github.com/kawhii/sso)
 
