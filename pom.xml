@@ -20,6 +20,7 @@
         <module>sso-management</module>
         <module>sso-client-demo</module>
         <module>sso-support</module>
+        <module>sso-monitor</module>
     </modules>
 
 
@@ -33,6 +34,8 @@
         <springboot.version>1.5.3.RELEASE</springboot.version>
         <spring-cloud.version>Dalston.SR4</spring-cloud.version>
         <java.cas.client.version>3.4.1</java.cas.client.version>
+        <!--监控系统-->
+        <admin-server.version>1.5.3</admin-server.version>
     </properties>
 
 

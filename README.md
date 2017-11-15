@@ -12,6 +12,7 @@
 
 ![目前教程](http://img.blog.csdn.net/20171104112102909?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdTAxMDQ3NTA0MQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
 
+![监控系统](http://img.blog.csdn.net/20171115154701467?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdTAxMDQ3NTA0MQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
 
 # 特性
 
@@ -30,6 +31,7 @@
 * 自定义校验器
 * 多属性返回
 * 验证码发送、校验（注册发送邮箱验证码）
+* 服务监控检测
 
 ## Tutorial: [![Csdn Blog Tutorial](https://img.shields.io/badge/csdn%20blog-tutorial-orange.svg)](http://blog.csdn.net/u010475041/article/category/7156505)
 
@@ -62,6 +64,7 @@
 |sso-cas-client-demo|cas-client-demo|8080|×|/sample|4|
 |sso-client-shiro-demo|shiro-client-demo|8083|×|/|5|
 |sso-client-proxy-demo|OAuth2代理转发客户端|8808|×|/||
+|sso-monitor|监控服务|8444|×|/||
 
 ## 代码下载 [![码云](https://img.shields.io/badge/download-码云-yellowgreen.svg)](https://git.oschina.net/Kawhi-Carl/sso) [![Github](https://img.shields.io/badge/download-GitHub-brightgreen.svg)](https://github.com/kawhii/sso)
 
@@ -112,6 +115,7 @@ build.cmd run
 * cas-client-demo [cas客户端](http://passport.sso.com:8080/sample)
 * shiro-client-demo [shiro客户端](http://passport.sso.com:8083)
 * sso-management [服务管理客户端](http://passport.sso.com:8081/cas-management)
+* sso-monitor [服务监控](http://passport.sso.com:8444)
 
 ```cmd
 #server-id 为上面的各服务名称，

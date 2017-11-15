@@ -1,9 +1,30 @@
 logging:
   file: "logs/sso-demo-proxy.log"
+info:
+  name: 代理登录请求
 
----
 server:
   port: 8808
 spring:
   application:
     name: client-proxy
+  profiles:
+    active: dev
+---
+spring:
+  profiles: dev
+  boot:
+    admin:
+      url: http://passport.sso.com:8444/
+      client:
+        management-base-url: http://passport.sso.com:8808
+        management-url: ${spring.boot.admin.client.management-base-url}
+        service-url: ${spring.boot.admin.client.management-base-url}
+        health-url: http://passport.sso.com:8808/health
+management:
+  security:
+    enabled: false
+
+security:
+  basic:
+    enabled: false

@@ -1,0 +1,34 @@
+#必须指定配置文件，否则监控系统无法获取
+logging:
+  file: "logs/monitor/monitor-server.log"
+info:
+  name: "监控系统"
+---
+spring:
+  application:
+    name: sso-monitor
+  profiles:
+    active:
+      # 启用安全配置
+      - dev
+# 当前项目端口
+server:
+  port: 8444
+
+---
+spring:
+  profiles: dev
+  boot:
+    admin:
+      url: http://passport.sso.com:8444/
+      client:
+        management-base-url: ${spring.boot.admin.url}
+        management-url: ${spring.boot.admin.url}
+        service-url: ${spring.boot.admin.url}
+management:
+  security:
+    enabled: false
+
+security:
+  basic:
+    enabled: false

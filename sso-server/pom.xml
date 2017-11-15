@@ -74,6 +74,11 @@
             <artifactId>cas-server-support-rest</artifactId>
             <version>${cas.version}</version>
         </dependency>
+        <dependency>
+            <groupId>org.apereo.cas</groupId>
+            <artifactId>cas-server-support-bootadmin-client</artifactId>
+            <version>${cas.version}</version>
+        </dependency>
     </dependencies>
     <dependencyManagement>
         <dependencies>

@@ -13,7 +13,7 @@
             <PatternLayout pattern="%d %p [%c] - &lt;%m&gt;%n"/>
         </Console>
 
-        <RollingFile name="file" fileName="${baseDir}/cas.log" append="true"
+        <RollingFile name="file" fileName="${baseDir}/sso/cas.log" append="true"
                      filePattern="${baseDir}/cas-%d{yyyy-MM-dd-HH}-%i.log">
             <PatternLayout pattern="%highlight{%d %p [%c] - &lt;%m&gt;}%n"/>
             <Policies>

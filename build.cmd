@@ -52,6 +52,12 @@
 	start "sso-config" %MAVEN_CMD% spring-boot:run -T 5 %1 %2 %3 -f sso-config/pom.xml
 @goto:eof
 
+:sso-monitor
+	@echo Stating monitor Server...
+	cd %CURR_DIR%
+	start "sso-monitor" %MAVEN_CMD% spring-boot:run -T 5 %1 %2 %3 -f sso-monitor/pom.xml
+@goto:eof
+
 :cas-client-demo
 	@echo Stating cas client demo...
 	cd %CURR_DIR%
@@ -76,6 +82,7 @@
 	@echo Starting run all...
 	call %MAVEN_CMD% clean
 	call:sso-config
+	call:sso-monitor
 	call:sso-server
 	call:cas-client-demo
 	call:shiro-client-demo
