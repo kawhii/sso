@@ -32,6 +32,7 @@
 * 多属性返回
 * 验证码发送、校验（注册发送邮箱验证码）
 * 服务监控检测
+* 校验码登录
 
 ## Tutorial: [![Csdn Blog Tutorial](https://img.shields.io/badge/csdn%20blog-tutorial-orange.svg)](http://blog.csdn.net/u010475041/article/category/7156505)
 

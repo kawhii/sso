@@ -12,7 +12,11 @@ import org.springframework.webflow.definition.registry.FlowDefinitionRegistry;
 import org.springframework.webflow.engine.ActionState;
 import org.springframework.webflow.engine.Flow;
 import org.springframework.webflow.engine.ViewState;
+import org.springframework.webflow.execution.Action;
 import org.springframework.webflow.engine.builder.support.FlowBuilderServices;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author Carl
@@ -32,6 +36,25 @@ public class ValidateWebflowConfigurer extends AbstractCasWebflowConfigurer {
     @Override
     protected void doInitialize() throws Exception {
         createPasswordResetValidateFlow();
+        createLoginValidateValidateFlow();
+    }
+
+    /**
+     * 登录校验流程
+     */
+    private void createLoginValidateValidateFlow() {
+        final Flow flow = getLoginFlow();
+        if (flow != null) {
+            final ActionState state = (ActionState) flow.getState(CasWebflowConstants.TRANSITION_ID_REAL_SUBMIT);
+            final List<Action> currentActions = new ArrayList<>();
+            state.getActionList().forEach(currentActions::add);
+            currentActions.forEach(a -> state.getActionList().remove(a));
+
+            state.getActionList().add(createEvaluateAction("validateLoginCaptchaAction"));
+            currentActions.forEach(a -> state.getActionList().add(a));
+
+            state.getTransitionSet().add(createTransition("captchaError", CasWebflowConstants.STATE_ID_INIT_LOGIN_FORM));
+        }
     }
 
     /**

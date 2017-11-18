@@ -47,6 +47,12 @@
             <artifactId>cas-server-support-pm</artifactId>
             <version>${cas.version}</version>
         </dependency>
+        <dependency>
+            <groupId>com.carl.auth</groupId>
+            <artifactId>sso-support-custom-auth</artifactId>
+            <version>${project.version}</version>
+            <optional>true</optional>
+        </dependency>
     </dependencies>
 
     <description>验证码支撑模块</description>

@@ -7,6 +7,7 @@ package com.carl.sso.support.captcha.config;
 import com.carl.sso.support.captcha.SessionCaptchaResultProvider;
 import com.carl.sso.support.captcha.action.CaptchaAwareFactory;
 import com.carl.sso.support.captcha.action.ValidateCaptchaAction;
+import com.carl.sso.support.captcha.action.ValidateLoginCaptchaAction;
 import org.apereo.cas.configuration.CasConfigurationProperties;
 import org.apereo.cas.pm.PasswordManagementService;
 import org.apereo.cas.pm.config.PasswordManagementConfiguration;
@@ -65,6 +66,15 @@ public class ValidateWebflowConfiguation {
     @RefreshScope
     public Action validateCaptchaAction() {
         ValidateCaptchaAction validateCaptchaAction = new ValidateCaptchaAction(captchaResultProvider, captchaAwareFactory(), passwordManagementService);
+        return validateCaptchaAction;
+    }
+
+
+    @ConditionalOnMissingBean(name = "validateLoginCaptchaAction")
+    @Bean
+    @RefreshScope
+    public Action validateLoginCaptchaAction() {
+        ValidateLoginCaptchaAction validateCaptchaAction = new ValidateLoginCaptchaAction(captchaResultProvider);
         return validateCaptchaAction;
     }
 
