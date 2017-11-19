@@ -21,7 +21,6 @@ import java.util.List;
 /**
  * @author Carl
  * @date 2017/10/30
- * @since
  */
 public class ValidateWebflowConfigurer extends AbstractCasWebflowConfigurer {
     /**
