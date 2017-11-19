@@ -9,6 +9,7 @@ import com.github.cage.Cage;
 import com.github.cage.GCage;
 import com.carl.sso.support.captcha.string.StringCaptchaWriter;
 
+import javax.imageio.ImageIO;
 import java.io.IOException;
 import java.io.OutputStream;
 
@@ -24,6 +25,6 @@ public class CageStringCaptchaWriter extends StringCaptchaWriter {
 
     @Override
     public void write(String text, OutputStream outputStream) throws IOException {
-        cage.draw(text, outputStream);
+        ImageIO.write(cage.drawImage(text),"png", outputStream);
     }
 }

@@ -50,15 +50,12 @@ public class CaptchaController extends AbstractDelegateController {
     protected ModelAndView handleRequestInternal(HttpServletRequest request, HttpServletResponse response) throws Exception {
         //设置response头信息
         //禁止缓存
-        response.setHeader("Pragma", "No-cache");
         response.setHeader("Cache-Control", "no-cache");
         response.setContentType("image/png");
-        response.setDateHeader("Expires", 0);
         OutputStream outputStream =  response.getOutputStream();
         //存储验证码到session
         String text = getAware().getAndStore(request.getSession());
         getCaptchaWriter().write(text, outputStream);
-        outputStream.flush();
         return null;
     }
 }
