@@ -21,6 +21,8 @@ import org.springframework.context.annotation.Configuration;
 @Configuration("captchaConfiguration")
 @EnableConfigurationProperties(CasConfigurationProperties.class)
 public class CaptchaConfiguration {
+
+    //注册bean到spring容器
     @Bean
     @ConditionalOnMissingBean(name = "captchaController")
     public CageCaptchaController captchaController() {

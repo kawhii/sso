@@ -16,7 +16,6 @@ import com.carl.sso.support.captcha.string.StringCaptchaResultAware;
  *
  * @author Carl
  * @date 2017/10/27
- * @since 2.3.8
  */
 public class CageCaptchaController extends CaptchaController {
 
