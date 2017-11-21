@@ -38,7 +38,7 @@
         <shiro.version>1.4.0</shiro.version>
         <buji.version>3.0.0</buji.version>
         <pac4j.version>2.0.0</pac4j.version>
-        <cas.version>5.1.5</cas.version>
+        <cas.version>5.1.6</cas.version>
         <admin-server.version>1.5.3</admin-server.version>
     </properties>
 
