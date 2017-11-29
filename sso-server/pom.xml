@@ -32,6 +32,12 @@
             <artifactId>sso-support-custom-auth</artifactId>
             <version>${project.version}</version>
         </dependency>
+        <!--单用户登录-->
+        <dependency>
+            <groupId>com.carl.auth</groupId>
+            <artifactId>sso-support-single-login</artifactId>
+            <version>${project.version}</version>
+        </dependency>
         <dependency>
             <groupId>com.carl.auth</groupId>
             <artifactId>sso-support-captcha</artifactId>
