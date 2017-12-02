@@ -34,45 +34,45 @@
 
 :sso-server
 	@echo Stating sso server...
-	cd %CURR_DIR%/sso-server
+	cd "%CURR_DIR%/sso-server"
 	start "sso-server" build.cmd run
-	cd %CURR_DIR%
+	cd "%CURR_DIR%"
 @goto:eof
 
 :sso-management
 	@echo Stating cas management...
-	cd %CURR_DIR%/sso-management
+	cd "%CURR_DIR%/sso-management"
     start "sso-management" build.cmd run
-    cd %CURR_DIR%
+    cd "%CURR_DIR%"
 @goto:eof
 
 :sso-config
 	@echo Stating config Server...
-	cd %CURR_DIR%
+	cd "%CURR_DIR%"
 	start "sso-config" %MAVEN_CMD% spring-boot:run -T 5 %1 %2 %3 -f sso-config/pom.xml
 @goto:eof
 
 :sso-monitor
 	@echo Stating monitor Server...
-	cd %CURR_DIR%
+	cd "%CURR_DIR%"
 	start "sso-monitor" %MAVEN_CMD% spring-boot:run -T 5 %1 %2 %3 -f sso-monitor/pom.xml
 @goto:eof
 
 :cas-client-demo
 	@echo Stating cas client demo...
-	cd %CURR_DIR%
+	cd "%CURR_DIR%"
 	start "cas-client-demo" %MAVEN_CMD% jetty:run -f sso-client-demo/sso-cas-client-demo/pom.xml
 @goto:eof
 
 :shiro-client-demo
 	@echo Stating shiro client demo...
-	cd %CURR_DIR%
+	cd "%CURR_DIR%"
 	start "shiro-client-demo" %MAVEN_CMD% spring-boot:run -T 5 %1 %2 %3 -f sso-client-demo/sso-client-shiro-demo/pom.xml
 @goto:eof
 
 :sso-client-proxy-demo
 	@echo Stating proxy client demo...
-	cd %CURR_DIR%
+	cd "%CURR_DIR%"
 	start "sso-client-proxy-demo" %MAVEN_CMD% spring-boot:run -T 5 %1 %2 %3 -f sso-client-demo/sso-client-proxy-demo/pom.xml
 @goto:eof
 
@@ -100,7 +100,7 @@
 	@echo 127.0.0.1 passport.sso.com >>C:\WINDOWS\system32\drivers\etc\hosts
 	::if exist "tomcat.cer" (echo file exists delete... & del tomcat.cer)
 	::echo Enter password: "123456"
-	::keytool -exportcert -alias passport.sso.com -keystore %CURR_DIR%/sso-server/src/main/resources/tomcat.keystore  -file tomcat.cer -rfc
+	::keytool -exportcert -alias passport.sso.com -keystore "%CURR_DIR%/sso-server/src/main/resources/tomcat.keystore"  -file tomcat.cer -rfc
 	::echo Enter password: "changeit" and next to Y
-	::keytool -import -alias passport.sso.com -keystore %JAVA_HOME%\jre\lib\security\cacerts -file tomcat.cer -trustcacerts
+	::keytool -import -alias passport.sso.com -keystore "%JAVA_HOME%\jre\lib\security\cacerts" -file tomcat.cer -trustcacerts
 @goto:eof
