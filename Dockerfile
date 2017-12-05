@@ -1,4 +1,4 @@
-FROM java:openjdk-8-jdk
+FROM java:8u111-jdk
 MAINTAINER Kawhii Carl (huang.wenbin@foxmail.com)
 RUN apt-get update
 RUN apt-get install -y maven
