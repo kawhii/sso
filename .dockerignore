@@ -1,0 +1,13 @@
+# Created by .ignore support plugin (hsz.mobi)
+### Node template
+# Logs
+**/logs/
+*.log
+.github/
+
+.travis.yml
+_config.yml
+build.cmd
+LICENSE
+**/README.md
+original-files/
