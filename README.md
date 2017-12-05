@@ -60,7 +60,7 @@
 *目前仅部署了配置中心及cas服务到docker环境中*
 
 ```cmd
-docker run -d --restart=always kawhii/sso -p 8443:8443
+docker run -d --restart=always  -p 8443:8443 kawhii/sso
 ```
 
 若采用docker启动，访问为：http://dockerip:8443/cas
