@@ -3,8 +3,7 @@ FROM centos:centos7
 MAINTAINER Kawhii Carl (huang.wenbin@foxmail.com)
 ENV PATH=$PATH:$JRE_HOME/bin
 
-RUN apt-get update
-RUN apt-get install -y maven
+RUN yum -y install maven
 
 RUN yum -y install wget tar unzip git \
     && yum -y clean all
