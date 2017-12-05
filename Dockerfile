@@ -29,7 +29,7 @@ ENV PATH $PATH:$JAVA_HOME/bin:.
 
 ADD . /usr/local/service
 
-RUN chmod +x run-cas.sh;
+RUN chmod +x /usr/local/service/run-cas.sh;
 
 WORKDIR /usr/local/service
 RUN mvn install
