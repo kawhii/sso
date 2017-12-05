@@ -27,9 +27,10 @@ EXPOSE 8888 8443
 ENV JAVA_HOME /opt/jre-home
 ENV PATH $PATH:$JAVA_HOME/bin:.
 
-ADD . /usr/local/service
+ADD ../ /usr/local/service
 WORKDIR /usr/local/service
 RUN mvn install
-RUN java -jar sso-config/target/sso-config.jar &
 
-CMD ["java","-jar","sso-server/target/cas.war"]
+#RUN java -jar sso-config/target/sso-config.jar &
+#CMD ["java","-jar","sso-server/target/cas.war"]
+CMD ["run-cas.sh"]
