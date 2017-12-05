@@ -16,6 +16,7 @@
 
 # 特性
 
+* Docker快速启动
 * GitHub授权登录
 * Cas Clint、Shiro Pac4j Client集成
 * jdbc用户密码加密
@@ -50,6 +51,20 @@
 |zhangsan|12345678|√||
 |zhaosi|12345|×|禁用|
 |wangwu|1234|√|需修改密码|
+
+
+---
+
+**[Docker 快速启动](https://hub.docker.com/r/kawhii/sso/)**
+
+*目前仅部署了配置中心及cas服务到docker环境中*
+
+```cmd
+docker run kawhii/sso -p 8443:8443
+```
+
+若采用docker启动，访问为：http://dockerip:8443/cas
+
 
 ### 注意
 * 由于修改密码功能目前是发送到笔者的邮箱，若调整，需要修改`sso-server/src/main/resources/profile/dev/sql/data-dev.sql`
