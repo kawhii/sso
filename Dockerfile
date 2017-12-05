@@ -21,7 +21,7 @@ RUN set -x; \
     && rm zulu$zulu_version-jdk$java_version-linux_x64.tar.gz \
     && ln -s /opt/zulu$zulu_version-jdk$java_version-linux_x64/jre/ /opt/jre-home;
 
-RUN chmod -R +x run-cas.sh
+RUN chmod -R +x run-cas.sh;
 
 EXPOSE 8888 8443
 
