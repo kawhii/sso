@@ -21,11 +21,6 @@ RUN set -x; \
     && rm zulu$zulu_version-jdk$java_version-linux_x64.tar.gz \
     && ln -s /opt/zulu$zulu_version-jdk$java_version-linux_x64/jre/ /opt/jre-home;
 
-RUN cd / \
-	&& wget http://www.azulsystems.com/sites/default/files/images/ZuluJCEPolicies.zip \
-    && unzip ZuluJCEPolicies.zip \
-    && mv -f ZuluJCEPolicies/*.jar /opt/jre-home/lib/security \
-    && rm ZuluJCEPolicies.zip;
 
 EXPOSE 8888 8443
 
