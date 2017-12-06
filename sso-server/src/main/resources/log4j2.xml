@@ -124,6 +124,9 @@
         <AsyncLogger name="org.apereo.services.persondir" level="debug" additivity="false">
             <AppenderRef ref="casConsole"/>
         </AsyncLogger>
+        <AsyncLogger name="org.apereo.cas.authentication" level="debug" additivity="false">
+            <AppenderRef ref="casConsole"/>
+        </AsyncLogger>
         <AsyncLogger name="org.springframework.cloud.context" level="warn" additivity="false">
             <AppenderRef ref="casConsole"/>
             <AppenderRef ref="casFile"/>
