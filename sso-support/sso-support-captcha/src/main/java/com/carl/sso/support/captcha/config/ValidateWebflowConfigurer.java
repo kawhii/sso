@@ -34,7 +34,7 @@ public class ValidateWebflowConfigurer extends AbstractCasWebflowConfigurer {
 
     @Override
     protected void doInitialize() throws Exception {
-        createPasswordResetValidateFlow();
+        //createPasswordResetValidateFlow();
         createLoginValidateValidateFlow();
     }
 

@@ -27,6 +27,7 @@
             <artifactId>cas-server-support-mongo-service-registry</artifactId>
             <version>${cas.version}</version>
         </dependency>-->
+        <!--自定义校验器-->
         <dependency>
             <groupId>com.carl.auth</groupId>
             <artifactId>sso-support-custom-auth</artifactId>
@@ -38,6 +39,7 @@
             <artifactId>sso-support-single-login</artifactId>
             <version>${project.version}</version>
         </dependency>
+        <!--校验码-->
         <dependency>
             <groupId>com.carl.auth</groupId>
             <artifactId>sso-support-captcha</artifactId>
