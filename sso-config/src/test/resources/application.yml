@@ -1,0 +1,39 @@
+logging:
+  file: "logs/config/sso-config.log"
+info:
+  name : "配置中心"
+
+server:
+  port: 8888
+  context-path: /config
+spring:
+  profiles:
+    active:
+      - native
+      - dev
+  application:
+    name: sso-config
+
+
+---
+spring:
+  profiles: dev
+  mail:
+    #发送邮件
+    host: smtp.qq.com
+    port: 465
+    #邮箱用户名
+    username: huang.wenbin@foxmail.com
+    #邮箱授权码
+    password: judnarjvmhsfbdji
+    testConnection: false
+    properties:
+      mail.smtp.auth: true
+      mail.smtp.ssl.enable: true
+management:
+  security:
+    enabled: false
+
+security:
+  basic:
+    enabled: false
