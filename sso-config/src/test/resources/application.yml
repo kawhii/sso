@@ -21,7 +21,7 @@ spring:
   mail:
     #发送邮件
     host: smtp.qq.com
-    port: 465
+    port: 587
     #邮箱用户名
     username: huang.wenbin@foxmail.com
     #邮箱授权码
@@ -29,7 +29,7 @@ spring:
     testConnection: false
     properties:
       mail.smtp.auth: true
-      mail.smtp.ssl.enable: true
+      mail.smtp.timeout: 25000
 management:
   security:
     enabled: false
