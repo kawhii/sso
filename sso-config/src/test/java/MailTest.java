@@ -36,6 +36,8 @@ public class MailTest {
         message.setTo(mail); //自己给自己发送邮件
         message.setSubject("主题：测试邮件");
         message.setText("测试邮件内容");
-        mailSender.send(message);
+
+        //可以进行测试
+//        mailSender.send(message);
     }
 }
