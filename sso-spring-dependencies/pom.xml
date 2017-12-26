@@ -10,7 +10,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.5.3.RELEASE</version>
+        <version>1.5.9.RELEASE</version>
         <relativePath/>
     </parent>
     <modelVersion>4.0.0</modelVersion>
@@ -39,7 +39,7 @@
         <buji.version>3.0.0</buji.version>
         <pac4j.version>2.0.0</pac4j.version>
         <cas.version>5.1.6</cas.version>
-        <admin-server.version>1.5.3</admin-server.version>
+        <admin-server.version>1.5.5</admin-server.version>
     </properties>
 
     <dependencyManagement>
