@@ -58,13 +58,9 @@ public class AccessTokenController {
         map.add(OAuthConstants.REDIRECT_URI, redirect_uri);
         map.add(OAuthConstants.GRANT_TYPE, authorization_code);
 
-        System.out.println(map);
-
         HttpEntity<MultiValueMap<String, String>> request = new HttpEntity<>(map, headers);
         ResponseEntity<String> resp = restTemplate.exchange("https://graph.qq.com/oauth2.0/token", HttpMethod.POST, request, String.class);
 
-        //todo 注意异常处理
-        System.out.println(resp.getBody());
 
         response.setContentType("application/json");
         OAuth2AccessToken token = tokenExtractor.extract(new Response(
