@@ -41,7 +41,7 @@
 * [Blog](http://blog.csdn.net/u010475041/article/category/7156505)
 * [Support](https://github.com/kawhii/sso/wiki)
 
-域名：passport.sso.com
+域名：localhost
 
 用户：
 
@@ -111,8 +111,10 @@ build.cmd help
 
 ### 初始化
 
+<!--
 1. 负责把`passport.sso.com`设置到host文件
 2. 把域名自签名证书导入到java环境（提示信息，第一个需要输入密码为**123456**，第二个导入密码为**changeit**）
+ -->
 
 ```cmd
 build.cmd init
@@ -127,12 +129,12 @@ build.cmd run
 ```
 
 
-* sso-config [配置中心](http://passport.sso.com:8888/config)
-* sso-server [单点登录服务](http://passport.sso.com:8443/cas)
-* cas-client-demo [cas客户端](http://passport.sso.com:8080/sample)
-* shiro-client-demo [shiro客户端](http://passport.sso.com:8083)
-* sso-management [服务管理客户端](http://passport.sso.com:8081/cas-management)
-* sso-monitor [服务监控](http://passport.sso.com:8444)
+* sso-config [配置中心](http://localhost:8888/config)
+* sso-server [单点登录服务](http://localhost:8443/cas)
+* cas-client-demo [cas客户端](http://localhost:8080/sample)
+* shiro-client-demo [shiro客户端](http://localhost:8083)
+* sso-management [服务管理客户端](http://localhost:8081/cas-management)
+* sso-monitor [服务监控](http://localhost:8444)
 
 ```cmd
 #server-id 为上面的各服务名称，

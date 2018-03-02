@@ -1,6 +1,6 @@
 # 配置
 
-该例子需要设置host为passport.sso.com
+该例子需要设置host为localhost
 
 [证书导入https教程](http://blog.csdn.net/u010475041/article/details/77931867)
 

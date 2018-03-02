@@ -20,9 +20,9 @@ spring:
   profiles: dev
   boot:
     admin:
-      url: http://passport.sso.com:8444/
+      url: http://localhost:8444/
       client:
-        management-base-url: http://passport.sso.com:8888/config
+        management-base-url: http://localhost:8888/config
         management-url: ${spring.boot.admin.client.management-base-url}
         service-url: ${spring.boot.admin.client.management-base-url}
 management:

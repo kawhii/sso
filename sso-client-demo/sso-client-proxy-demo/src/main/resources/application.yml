@@ -15,12 +15,12 @@ spring:
   profiles: dev
   boot:
     admin:
-      url: http://passport.sso.com:8444/
+      url: http://localhost:8444/
       client:
-        management-base-url: http://passport.sso.com:8808
+        management-base-url: http://localhost:8808
         management-url: ${spring.boot.admin.client.management-base-url}
         service-url: ${spring.boot.admin.client.management-base-url}
-        health-url: http://passport.sso.com:8808/health
+        health-url: http://localhost:8808/health
 management:
   security:
     enabled: false
