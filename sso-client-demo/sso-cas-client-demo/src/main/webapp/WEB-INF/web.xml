@@ -21,7 +21,7 @@
         <filter-class>org.jasig.cas.client.session.SingleSignOutFilter</filter-class>
         <init-param>
             <param-name>casServerUrlPrefix</param-name>
-            <param-value>http://auth.360huiyun.com</param-value>
+            <param-value>http://localhost:8443/cas</param-value>
         </init-param>
     </filter>
 
@@ -31,7 +31,7 @@
         <filter-class>org.jasig.cas.client.authentication.AuthenticationFilter</filter-class>
         <init-param>
             <param-name>casServerLoginUrl</param-name>
-            <param-value>http://auth.360huiyun.com/login</param-value>
+            <param-value>http://localhost:8443/cas/login</param-value>
         </init-param>
         <init-param>
             <param-name>serverName</param-name>
@@ -51,7 +51,7 @@
         <filter-class>org.jasig.cas.client.validation.Cas30ProxyReceivingTicketValidationFilter</filter-class>
         <init-param>
             <param-name>casServerUrlPrefix</param-name>
-            <param-value>http://auth.360huiyun.com</param-value>
+            <param-value>http://localhost:8443/cas</param-value>
         </init-param>
         <init-param>
             <param-name>serverName</param-name>
