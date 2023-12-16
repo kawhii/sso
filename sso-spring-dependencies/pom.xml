@@ -86,7 +86,7 @@
                 <enabled>true</enabled>
             </releases>
             <id>maven2-release</id>
-            <url>http://uk.maven.org/maven2/</url>
+            <url>https://uk.maven.org/maven2/</url>
         </repository>
         <repository>
             <snapshots>
@@ -95,7 +95,7 @@
                 <updatePolicy>interval:120</updatePolicy>
             </snapshots>
             <id>oss-snapshots</id>
-            <url>http://repository.jboss.org/nexus/content/groups/public/</url>
+            <url>https://repository.jboss.org/nexus/content/groups/public/</url>
         </repository>
     </repositories>
 
@@ -105,7 +105,7 @@
                 <enabled>true</enabled>
             </releases>
             <id>maven2-release</id>
-            <url>http://uk.maven.org/maven2/</url>
+            <url>https://uk.maven.org/maven2/</url>
         </pluginRepository>
     </pluginRepositories>
 
