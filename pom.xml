@@ -46,7 +46,7 @@
                 <enabled>true</enabled>
             </releases>
             <id>maven2-release</id>
-            <url>http://uk.maven.org/maven2/</url>
+            <url>https://uk.maven.org/maven2/</url>
         </repository>
     </repositories>
 
@@ -56,7 +56,7 @@
                 <enabled>true</enabled>
             </releases>
             <id>maven2-release</id>
-            <url>http://uk.maven.org/maven2/</url>
+            <url>https://uk.maven.org/maven2/</url>
         </pluginRepository>
     </pluginRepositories>
 
